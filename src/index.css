@@ -1,88 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 210 29% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 29% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    --popover-foreground: 210 29% 11%;
+    --primary: 207 76% 24%;
     --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
+    --secondary: 216 14% 95%;
+    --secondary-foreground: 207 76% 24%;
+    --muted: 216 14% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 202 72% 35%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --border: 216 18% 91%;
+    --input: 216 18% 91%;
+    --ring: 207 76% 24%;
     --radius: 0.5rem;
-
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 210 29% 11%;
     --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
+    --card: 210 29% 11%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
+    --popover: 210 29% 11%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
+    --primary-foreground: 207 76% 24%;
+    --secondary: 217 33% 18%;
     --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 33% 18%;
     --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 213 27% 84%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -98,8 +71,355 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
   }
+}
+
+/* ── TERRAFREEZE Hero ── */
+
+.tf-hero *,
+.tf-hero *::before,
+.tf-hero *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tf-hero {
+  display: flex;
+  width: 100%;
+  min-height: 580px;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+}
+
+.tf-hero__left {
+  width: 58%;
+  background: hsl(220 14% 96%);
+  padding: 64px 48px 64px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.tf-hero__right {
+  width: 42%;
+  background: hsl(220 10% 91%);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tf-hero__reviews {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.tf-hero__avatars {
+  display: flex;
+}
+
+.tf-hero__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  margin-left: -10px;
+  position: relative;
+}
+
+.tf-hero__avatar:first-child {
+  margin-left: 0;
+  z-index: 3;
+}
+.tf-hero__avatar:nth-child(2) { z-index: 2; }
+.tf-hero__avatar:nth-child(3) { z-index: 1; }
+
+.tf-hero__stars-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tf-hero__stars-block svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tf-hero__customers-count {
+  font-size: 12.5px;
+  color: hsl(var(--muted-foreground));
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.tf-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tf-hero__eyebrow-line {
+  width: 28px;
+  height: 2px;
+  background: hsl(var(--accent));
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.tf-hero__eyebrow-text {
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: hsl(var(--accent));
+}
+
+.tf-hero__headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.08;
+  color: hsl(var(--foreground));
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+}
+
+.tf-hero__headline-accent {
+  font-style: italic;
+  background: linear-gradient(135deg, hsl(202 86% 41%), hsl(207 76% 24%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tf-hero__sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: hsl(215 14% 35%);
+  font-weight: 400;
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+.tf-hero__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.tf-hero__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid hsla(202, 72%, 36%, 0.35);
+  background: hsla(202, 72%, 36%, 0.06);
+  color: hsl(var(--accent));
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.tf-hero__cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.tf-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 32px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.tf-hero__btn:hover {
+  background: hsl(207 76% 19%);
+  transform: translateY(-1px);
+}
+
+.tf-hero__btn:active {
+  transform: scale(0.97);
+}
+
+.tf-hero__link {
+  font-size: 14px;
+  color: hsl(215 14% 35%);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: hsla(215, 14%, 35%, 0.4);
+  font-weight: 400;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.tf-hero__link:hover {
+  color: hsl(var(--primary));
+  text-decoration-color: hsl(var(--primary));
+}
+
+.tf-hero__trust {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: hsl(210 14% 59%);
+  font-weight: 400;
+}
+
+.tf-hero__trust-item {
+  white-space: nowrap;
+}
+
+.tf-hero__trust-dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: hsl(210 14% 73%);
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+.tf-hero__product-img {
+  width: 52%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.06));
+  position: relative;
+  z-index: 1;
+}
+
+.tf-hero__review-card {
+  position: absolute;
+  top: 32px;
+  right: 28px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 16px 18px;
+  max-width: 220px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+  z-index: 2;
+}
+
+.tf-hero__review-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.tf-hero__review-star {
+  width: 13px;
+  height: 13px;
+  color: #d4a017;
+}
+
+.tf-hero__review-quote {
+  font-size: 12px;
+  line-height: 1.55;
+  color: hsl(218 14% 25%);
+  font-style: italic;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.tf-hero__review-attr {
+  font-size: 11px;
+  color: hsl(210 14% 59%);
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes tfFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tf-hero__anim {
+  opacity: 0;
+  animation: tfFadeUp 0.65s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.tf-hero__anim--d1 { animation-delay: 0.08s; }
+.tf-hero__anim--d2 { animation-delay: 0.18s; }
+.tf-hero__anim--d3 { animation-delay: 0.30s; }
+.tf-hero__anim--d4 { animation-delay: 0.42s; }
+.tf-hero__anim--d5 { animation-delay: 0.52s; }
+.tf-hero__anim--d6 { animation-delay: 0.62s; }
+.tf-hero__anim--d7 { animation-delay: 0.72s; }
+
+.tf-hero__review-card {
+  opacity: 0;
+  animation: tfFadeUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: 0.85s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tf-hero__anim,
+  .tf-hero__review-card {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .tf-hero__left { padding: 48px 36px 48px 44px; }
+  .tf-hero__headline { font-size: 38px; }
+  .tf-hero__product-img { width: 62%; }
+  .tf-hero__review-card { max-width: 190px; top: 24px; right: 20px; }
+}
+
+@media (max-width: 768px) {
+  .tf-hero { flex-direction: column-reverse; min-height: auto; }
+  .tf-hero__left, .tf-hero__right { width: 100%; }
+  .tf-hero__right { padding: 40px 24px 20px; min-height: 320px; }
+  .tf-hero__left { padding: 36px 24px 44px; }
+  .tf-hero__headline { font-size: 32px; }
+  .tf-hero__sub { font-size: 15px; }
+  .tf-hero__product-img { width: 48%; }
+  .tf-hero__review-card { top: 16px; right: 16px; max-width: 180px; padding: 12px 14px; }
+  .tf-hero__review-quote { font-size: 11px; }
+  .tf-hero__review-attr { font-size: 10px; }
+  .tf-hero__pills { gap: 6px; }
+  .tf-hero__pill { padding: 5px 11px; font-size: 11.5px; }
+  .tf-hero__cta-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .tf-hero__trust { flex-wrap: wrap; gap: 4px; }
+}
+
+@media (max-width: 420px) {
+  .tf-hero__headline { font-size: 28px; }
+  .tf-hero__product-img { width: 56%; }
+  .tf-hero__right { min-height: 280px; }
 }
