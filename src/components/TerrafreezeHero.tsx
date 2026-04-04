@@ -1,6 +1,5 @@
-import productImg from "@/assets/terrafreeze-product.png";
 import heroBgIce from "@/assets/hero-bg-ice.jpg";
-import heroBgMountain from "@/assets/hero-bg-mountain.jpg";
+import heroBgIceProduct from "@/assets/hero-bg-ice-product.jpg";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -18,40 +17,19 @@ const Stars = () => (
 
 const pills = ["Menthol", "Arnica", "MSM", "Emu Oil", "Methyl Salicylate"];
 
-const backgrounds: Record<string, string> = {
-  ice: heroBgIce,
-  mountain: heroBgMountain,
-};
-
-const variantLabels: Record<string, string> = {
-  ice: "Option A — Ice / Frost Explosion",
-  mountain: "Option B — Mountain / Glacier",
-};
-
-interface TerrafreezeHeroProps {
-  variant: "ice" | "mountain";
-}
-
-const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
+const TerrafreezeHero = () => {
   return (
-    <section className="relative w-full min-h-[600px] flex items-center overflow-hidden">
-      {/* Background image */}
+    <section className="relative w-full min-h-[620px] flex items-center overflow-hidden">
+      {/* Background — subtle ice texture */}
       <img
-        src={backgrounds[variant]}
+        src={heroBgIce}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
         width={1920}
         height={1080}
       />
-      {/* Soft overlay for text readability on light bg */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,20%,96%,0.85)] via-[hsl(210,20%,96%,0.6)] to-[hsl(210,20%,96%,0.15)]" />
-
-      {/* Variant label */}
-      <div className="absolute top-4 left-4 z-20 px-3 py-1.5 rounded-md bg-primary/80 backdrop-blur-sm">
-        <span className="text-primary-foreground text-xs font-medium tracking-wide">
-          {variantLabels[variant]}
-        </span>
-      </div>
+      {/* Soft wash so left text is readable */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,20%,96%,0.92)] via-[hsl(210,20%,96%,0.7)] to-[hsl(210,20%,96%,0.2)]" />
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
@@ -106,7 +84,7 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
             {pills.map((p) => (
               <span
                 key={p}
-                className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-accent/35 bg-accent/8 text-accent text-xs font-medium"
+                className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-accent/35 bg-accent/10 text-accent text-xs font-medium"
               >
                 {p}
               </span>
@@ -139,16 +117,16 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
           </div>
         </div>
 
-        {/* Right — product image */}
+        {/* Right — integrated product + ice explosion */}
         <div className="flex-1 flex items-center justify-center relative">
           <img
-            src={productImg}
-            alt="TERRAFREEZE pain relief cream jar"
-            className="w-[55%] md:w-[50%] lg:w-[60%] h-auto object-contain drop-shadow-[0_12px_40px_rgba(0,0,0,0.18)] relative z-10"
+            src={heroBgIceProduct}
+            alt="TERRAFREEZE jar bursting from ice crystals"
+            className="w-[90%] md:w-[85%] lg:w-full max-w-lg h-auto object-contain relative z-10"
           />
 
           {/* Floating review card */}
-          <div className="absolute top-4 right-4 lg:top-8 lg:right-0 bg-[hsl(0,0%,100%,0.75)] backdrop-blur-md border border-border rounded-xl p-4 max-w-[200px] z-20 shadow-sm">
+          <div className="absolute top-2 right-2 lg:top-4 lg:right-0 bg-[hsl(0,0%,100%,0.75)] backdrop-blur-md border border-border rounded-xl p-4 max-w-[200px] z-20 shadow-sm">
             <div className="flex gap-0.5 mb-2">
               {[...Array(5)].map((_, i) => (
                 <StarIcon key={i} className="w-3 h-3 text-[hsl(43,76%,46%)]" />
