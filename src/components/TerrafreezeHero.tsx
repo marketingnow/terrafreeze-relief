@@ -1,5 +1,4 @@
-import heroBgIce from "@/assets/hero-bg-ice.jpg";
-import heroBgIceProduct from "@/assets/hero-bg-ice-product.jpg";
+import heroBgFull from "@/assets/hero-bg-full.jpg";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -19,22 +18,19 @@ const pills = ["Menthol", "Arnica", "MSM", "Emu Oil", "Methyl Salicylate"];
 
 const TerrafreezeHero = () => {
   return (
-    <section className="relative w-full min-h-[620px] flex items-center overflow-hidden">
-      {/* Background — subtle ice texture */}
+    <section className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center overflow-hidden">
+      {/* Full-bleed background with product baked in */}
       <img
-        src={heroBgIce}
+        src={heroBgFull}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
+        className="absolute inset-0 w-full h-full object-cover object-right"
         width={1920}
         height={1080}
       />
-      {/* Soft wash so left text is readable */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,20%,96%,0.92)] via-[hsl(210,20%,96%,0.7)] to-[hsl(210,20%,96%,0.2)]" />
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
-        {/* Left copy */}
-        <div className="flex-1 max-w-xl">
+      {/* Content — left side only, product is in the background image */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
+        <div className="max-w-xl">
           {/* Social proof */}
           <div className="flex items-center gap-3 mb-6">
             <div className="flex -space-x-2.5">
@@ -84,7 +80,7 @@ const TerrafreezeHero = () => {
             {pills.map((p) => (
               <span
                 key={p}
-                className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-accent/35 bg-accent/10 text-accent text-xs font-medium"
+                className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-accent/35 bg-[hsl(0,0%,100%,0.6)] backdrop-blur-sm text-accent text-xs font-medium"
               >
                 {p}
               </span>
@@ -114,30 +110,6 @@ const TerrafreezeHero = () => {
             <span>Free Shipping $60+</span>
             <span className="w-1 h-1 rounded-full bg-muted-foreground/50 mx-2.5" />
             <span>Ships from Canada</span>
-          </div>
-        </div>
-
-        {/* Right — integrated product + ice explosion */}
-        <div className="flex-1 flex items-center justify-center relative">
-          <img
-            src={heroBgIceProduct}
-            alt="TERRAFREEZE jar bursting from ice crystals"
-            className="w-[90%] md:w-[85%] lg:w-full max-w-lg h-auto object-contain relative z-10"
-          />
-
-          {/* Floating review card */}
-          <div className="absolute top-2 right-2 lg:top-4 lg:right-0 bg-[hsl(0,0%,100%,0.75)] backdrop-blur-md border border-border rounded-xl p-4 max-w-[200px] z-20 shadow-sm">
-            <div className="flex gap-0.5 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <StarIcon key={i} className="w-3 h-3 text-[hsl(43,76%,46%)]" />
-              ))}
-            </div>
-            <p className="text-xs leading-relaxed text-foreground italic mb-2">
-              "Cools fast, no greasy feel. Back on the ice."
-            </p>
-            <span className="text-[11px] text-muted-foreground font-medium">
-              — Dave M., Vancouver BC
-            </span>
           </div>
         </div>
       </div>
