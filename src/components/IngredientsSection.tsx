@@ -1,103 +1,117 @@
-import { Snowflake, Leaf, FlaskConical, Droplets, ShieldCheck } from "lucide-react";
+import { ShieldCheck, Leaf, Beaker, Award, Truck, MapPin } from "lucide-react";
+import mentholImg from "@/assets/ingredient-menthol.jpg";
+import arnicaImg from "@/assets/ingredient-arnica.jpg";
+import msmImg from "@/assets/ingredient-msm.jpg";
+import emuOilImg from "@/assets/ingredient-emu-oil.jpg";
 
 const ingredients = [
   {
-    icon: Snowflake,
     name: "Menthol",
-    desc: "Instant cooling that calms inflamed tissue and eases muscle tension on contact. Feel the difference in seconds.",
-    highlight: "Fast-acting cooling",
-    stat: "< 30s",
-    statLabel: "to feel relief",
+    img: mentholImg,
+    desc: "Delivers an instant cooling sensation that calms inflamed tissue and eases muscle tension on contact.",
+    dosage: "5%",
   },
   {
-    icon: Leaf,
     name: "Arnica Montana",
-    desc: "Trusted by Canadian athletes and physiotherapists to reduce bruising and swelling — naturally, without harsh chemicals.",
-    highlight: "Natural anti-inflammatory",
-    stat: "100%",
-    statLabel: "plant-derived",
+    img: arnicaImg,
+    desc: "A time-tested botanical used by Canadian athletes and physiotherapists to reduce bruising and swelling naturally.",
+    dosage: "4%",
   },
   {
-    icon: FlaskConical,
     name: "MSM",
-    desc: "Supports joint flexibility and reduces oxidative stress in connective tissue — essential for active Canadians through every season.",
-    highlight: "Joint & tissue support",
-    stat: "3rd",
-    statLabel: "most researched joint compound",
+    img: msmImg,
+    desc: "Supports joint flexibility and helps reduce oxidative stress in connective tissue — essential for active Canadians.",
+    dosage: "2%",
   },
   {
-    icon: Droplets,
     name: "Emu Oil",
-    desc: "Deep-penetrating carrier that delivers active ingredients beneath the skin's surface — right where pain lives.",
-    highlight: "Deep absorption carrier",
-    stat: "5x",
-    statLabel: "deeper penetration",
+    img: emuOilImg,
+    desc: "Deep-penetrating carrier that drives active ingredients beneath the skin — right where pain lives.",
+    dosage: "3%",
   },
+];
+
+const badges = [
+  { icon: ShieldCheck, label: "Health Canada NPN Registered" },
+  { icon: Leaf, label: "Natural Ingredients" },
+  { icon: Beaker, label: "Clinically Studied" },
+  { icon: Award, label: "Third Party Tested" },
+  { icon: Truck, label: "Free Shipping $60+" },
+  { icon: MapPin, label: "Made in Canada" },
 ];
 
 const IngredientsSection = () => {
   return (
-    <section className="w-full py-20 lg:py-28 relative overflow-hidden">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/40 to-background" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-accent/[0.03] blur-3xl" />
+    <section className="w-full py-20 lg:py-28 bg-foreground relative overflow-hidden">
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-6">
-            <ShieldCheck className="w-3.5 h-3.5 text-accent" />
-            <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-accent">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-foreground/10 border border-primary-foreground/10 mb-6">
+            <ShieldCheck className="w-3.5 h-3.5 text-primary-foreground/70" />
+            <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-primary-foreground/70">
               Health Canada Registered (NPN)
             </span>
           </div>
-          <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-foreground mb-5">
-            4 clinically studied ingredients.{" "}
-            <br className="hidden sm:block" />
-            <span className="italic bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              Zero compromises.
-            </span>
+          <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-primary-foreground mb-5">
+            What's inside{" "}
+            <span className="italic text-accent-foreground">every jar.</span>
           </h2>
-          <p className="text-muted-foreground text-base max-w-xl mx-auto leading-relaxed">
-            Every jar is backed by science, trusted by 15,000+ Canadians, and registered with Health Canada. Not your average pain cream.
+          <p className="text-primary-foreground/60 text-base max-w-xl mx-auto leading-relaxed">
+            4 clinically studied ingredients. Zero fillers. Trusted by 15,000+ Canadians coast to coast.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Ingredient cards — photo-backed like reference */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
           {ingredients.map((item) => (
             <div
               key={item.name}
-              className="group relative rounded-2xl border border-border bg-card/80 backdrop-blur-sm p-6 hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_-15px_hsl(var(--accent)/0.15)]"
+              className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-default"
             >
-              {/* Stat badge */}
-              <div className="absolute top-5 right-5">
-                <div className="text-right">
-                  <span className="block text-xl font-bold text-accent leading-none">{item.stat}</span>
-                  <span className="text-[9px] text-muted-foreground uppercase tracking-wider">{item.statLabel}</span>
+              {/* Background image */}
+              <img
+                src={item.img}
+                alt={item.name}
+                loading="lazy"
+                width={640}
+                height={512}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+
+              {/* Content */}
+              <div className="relative z-10 h-full flex flex-col justify-between p-5 lg:p-6">
+                <div>
+                  <h3 className="font-['Playfair_Display',serif] font-bold text-2xl lg:text-3xl text-white leading-tight mb-2">
+                    {item.name}
+                  </h3>
+                  <p className="text-white/70 text-xs lg:text-sm leading-relaxed max-w-[90%]">
+                    {item.desc}
+                  </p>
+                </div>
+                {/* Dosage badge */}
+                <div className="self-start">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-white text-xs font-semibold tracking-wide">
+                    {item.dosage}
+                  </span>
                 </div>
               </div>
-
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-accent/15 to-accent/5 flex items-center justify-center mb-5 group-hover:from-accent/25 group-hover:to-accent/10 transition-colors">
-                <item.icon className="w-5 h-5 text-accent" />
-              </div>
-              <span className="inline-block text-[10px] font-semibold tracking-[0.12em] uppercase text-accent/60 mb-1.5">
-                {item.highlight}
-              </span>
-              <h3 className="text-foreground font-semibold text-lg mb-2.5">{item.name}</h3>
-              <p className="text-muted-foreground text-[13px] leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA nudge */}
-        <div className="text-center mt-12">
-          <p className="text-sm text-muted-foreground">
-            Want to see the full ingredient list?{" "}
-            <a href="#" className="text-accent font-medium underline underline-offset-2 hover:text-primary transition-colors">
-              View Certificate of Analysis →
-            </a>
-          </p>
+        {/* Trust badge row */}
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 pt-10 border-t border-primary-foreground/10">
+          {badges.map((b) => (
+            <div key={b.label} className="flex items-center gap-2 text-primary-foreground/50 text-xs lg:text-sm">
+              <b.icon className="w-4 h-4" />
+              <span>{b.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
