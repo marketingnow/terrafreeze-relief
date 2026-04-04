@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
         {/* Urgency bar */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm text-muted-foreground">
           <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="font-medium text-foreground">2,847</span> jars sold this month
           </span>
           <span className="hidden sm:block w-1 h-1 rounded-full bg-border" />

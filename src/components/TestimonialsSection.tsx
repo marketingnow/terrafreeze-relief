@@ -130,8 +130,8 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
                 {t.verified && (
-                  <span className="text-[10px] text-green-600 font-medium flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                  <span className="text-[10px] text-accent font-medium flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                     Verified
                   </span>
                 )}
