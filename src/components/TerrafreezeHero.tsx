@@ -1,7 +1,5 @@
 import productImg from "@/assets/terrafreeze-product.png";
 import heroBgIce from "@/assets/hero-bg-ice.jpg";
-import heroBgSmoke from "@/assets/hero-bg-smoke.jpg";
-import heroBgEnergy from "@/assets/hero-bg-energy.jpg";
 import heroBgMountain from "@/assets/hero-bg-mountain.jpg";
 
 const StarIcon = ({ className }: { className?: string }) => (
@@ -22,20 +20,16 @@ const pills = ["Menthol", "Arnica", "MSM", "Emu Oil", "Methyl Salicylate"];
 
 const backgrounds: Record<string, string> = {
   ice: heroBgIce,
-  smoke: heroBgSmoke,
-  energy: heroBgEnergy,
   mountain: heroBgMountain,
 };
 
 const variantLabels: Record<string, string> = {
-  ice: "1 — Ice / Frost Explosion",
-  smoke: "2 — Blue Smoke / Mist",
-  energy: "3 — Abstract Energy Burst",
-  mountain: "4 — Mountain / Glacier",
+  ice: "Option A — Ice / Frost Explosion",
+  mountain: "Option B — Mountain / Glacier",
 };
 
 interface TerrafreezeHeroProps {
-  variant: "ice" | "smoke" | "energy" | "mountain";
+  variant: "ice" | "mountain";
 }
 
 const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
@@ -49,12 +43,12 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
         width={1920}
         height={1080}
       />
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,29%,6%,0.88)] via-[hsl(210,29%,8%,0.7)] to-[hsl(210,29%,8%,0.3)]" />
+      {/* Soft overlay for text readability on light bg */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(210,20%,96%,0.85)] via-[hsl(210,20%,96%,0.6)] to-[hsl(210,20%,96%,0.15)]" />
 
       {/* Variant label */}
-      <div className="absolute top-4 left-4 z-20 px-3 py-1.5 rounded-md bg-[hsl(0,0%,100%,0.15)] backdrop-blur-sm border border-[hsl(0,0%,100%,0.2)]">
-        <span className="text-[hsl(0,0%,100%)] text-xs font-medium tracking-wide font-[DM_Sans,sans-serif]">
+      <div className="absolute top-4 left-4 z-20 px-3 py-1.5 rounded-md bg-primary/80 backdrop-blur-sm">
+        <span className="text-primary-foreground text-xs font-medium tracking-wide">
           {variantLabels[variant]}
         </span>
       </div>
@@ -73,7 +67,7 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
               ].map((a, i) => (
                 <div
                   key={i}
-                  className="w-9 h-9 rounded-full border-2 border-[hsl(0,0%,100%,0.3)] flex items-center justify-center text-[hsl(0,0%,100%)] text-xs font-medium"
+                  className="w-9 h-9 rounded-full border-2 border-[hsl(0,0%,100%)] flex items-center justify-center text-[hsl(0,0%,100%)] text-xs font-medium"
                   style={{ background: a.bg, zIndex: 3 - i }}
                 >
                   {a.initials}
@@ -82,7 +76,7 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
             </div>
             <div className="flex flex-col gap-0.5">
               <Stars />
-              <span className="text-[hsl(210,14%,73%)] text-xs">15,000+ Canadians</span>
+              <span className="text-muted-foreground text-xs">15,000+ Canadians</span>
             </div>
           </div>
 
@@ -95,7 +89,7 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
           </div>
 
           {/* Headline */}
-          <h1 className="font-['Playfair_Display',serif] font-bold text-[clamp(30px,4vw,54px)] leading-[1.08] text-[hsl(0,0%,100%)] mb-5 tracking-tight">
+          <h1 className="font-['Playfair_Display',serif] font-bold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
             Targeted relief, built for{" "}
             <span className="italic bg-gradient-to-br from-accent to-primary bg-clip-text text-transparent">
               real Canadians.
@@ -103,7 +97,7 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-[hsl(210,14%,73%)] text-base leading-relaxed mb-6 max-w-lg">
+          <p className="text-muted-foreground text-base leading-relaxed mb-6 max-w-lg">
             Menthol, Arnica, MSM and Emu Oil — applied where it hurts, felt where it counts.
           </p>
 
@@ -112,7 +106,7 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
             {pills.map((p) => (
               <span
                 key={p}
-                className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[hsl(202,72%,36%,0.4)] bg-[hsl(202,72%,36%,0.12)] text-accent text-xs font-medium"
+                className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-accent/35 bg-accent/8 text-accent text-xs font-medium"
               >
                 {p}
               </span>
@@ -129,18 +123,18 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
             </a>
             <a
               href="#"
-              className="text-sm text-[hsl(210,14%,73%)] underline underline-offset-4 decoration-[hsl(210,14%,73%,0.4)] hover:text-[hsl(0,0%,100%)] transition-colors"
+              className="text-sm text-muted-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:text-primary transition-colors"
             >
               See all packages
             </a>
           </div>
 
           {/* Trust */}
-          <div className="flex items-center text-xs text-[hsl(210,14%,59%)]">
+          <div className="flex items-center text-xs text-muted-foreground">
             <span>180-Day Guarantee</span>
-            <span className="w-1 h-1 rounded-full bg-[hsl(210,14%,59%)] mx-2.5" />
+            <span className="w-1 h-1 rounded-full bg-muted-foreground/50 mx-2.5" />
             <span>Free Shipping $60+</span>
-            <span className="w-1 h-1 rounded-full bg-[hsl(210,14%,59%)] mx-2.5" />
+            <span className="w-1 h-1 rounded-full bg-muted-foreground/50 mx-2.5" />
             <span>Ships from Canada</span>
           </div>
         </div>
@@ -150,20 +144,20 @@ const TerrafreezeHero = ({ variant }: TerrafreezeHeroProps) => {
           <img
             src={productImg}
             alt="TERRAFREEZE pain relief cream jar"
-            className="w-[55%] md:w-[50%] lg:w-[60%] h-auto object-contain drop-shadow-[0_12px_40px_rgba(0,0,0,0.35)] relative z-10"
+            className="w-[55%] md:w-[50%] lg:w-[60%] h-auto object-contain drop-shadow-[0_12px_40px_rgba(0,0,0,0.18)] relative z-10"
           />
 
           {/* Floating review card */}
-          <div className="absolute top-4 right-4 lg:top-8 lg:right-0 bg-[hsl(0,0%,100%,0.12)] backdrop-blur-md border border-[hsl(0,0%,100%,0.15)] rounded-xl p-4 max-w-[200px] z-20">
+          <div className="absolute top-4 right-4 lg:top-8 lg:right-0 bg-[hsl(0,0%,100%,0.75)] backdrop-blur-md border border-border rounded-xl p-4 max-w-[200px] z-20 shadow-sm">
             <div className="flex gap-0.5 mb-2">
               {[...Array(5)].map((_, i) => (
                 <StarIcon key={i} className="w-3 h-3 text-[hsl(43,76%,46%)]" />
               ))}
             </div>
-            <p className="text-xs leading-relaxed text-[hsl(0,0%,100%,0.9)] italic mb-2">
+            <p className="text-xs leading-relaxed text-foreground italic mb-2">
               "Cools fast, no greasy feel. Back on the ice."
             </p>
-            <span className="text-[11px] text-[hsl(210,14%,73%)] font-medium">
+            <span className="text-[11px] text-muted-foreground font-medium">
               — Dave M., Vancouver BC
             </span>
           </div>

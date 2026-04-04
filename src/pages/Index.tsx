@@ -1,6 +1,6 @@
 import TerrafreezeHero from "@/components/TerrafreezeHero";
 
-const variants = ["ice", "smoke", "energy", "mountain"] as const;
+const variants = ["ice", "mountain"] as const;
 
 const Index = () => {
   return (
