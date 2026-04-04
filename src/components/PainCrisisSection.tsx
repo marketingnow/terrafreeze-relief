@@ -1,12 +1,21 @@
 const PainCrisisSection = () => {
-  // Bar chart data
-  const comparisonData = [
-    { label: "Baseline", terrafreeze: 43, competitor: 45 },
-    { label: "Day 8", terrafreeze: 17, competitor: 29 },
+  // Data for the two treatment groups
+  const groups = [
+    {
+      label: "Top Pain Cream",
+      before: 43,
+      after: 29,
+      reduction: "32.3%",
+    },
+    {
+      label: "TERRAFREEZE®",
+      before: 45,
+      after: 17,
+      reduction: "59.5%",
+    },
   ];
 
   const maxVal = 50;
-  const barHeight = (val: number) => (val / maxVal) * 180;
 
   return (
     <section className="w-full py-20 lg:py-28 bg-secondary relative overflow-hidden">
@@ -39,143 +48,125 @@ const PainCrisisSection = () => {
             </p>
           </div>
 
-          {/* Right — comparison bar chart card */}
-          <div className="flex justify-center">
-            <div className="bg-background rounded-2xl shadow-lg border border-border/60 p-8 max-w-md w-full">
-              <h3 className="font-['Playfair_Display',serif] font-bold text-xl text-foreground text-center mb-1">
-                TERRAFREEZE® vs. Top Pain Cream
-              </h3>
-              <p className="text-center text-xs text-muted-foreground mb-6">
-                Severity of Pain Score (VAS)*
-              </p>
+          {/* Right — chart built with divs for clarity */}
+          <div className="bg-background rounded-2xl shadow-xl border border-border/60 p-6 sm:p-8 lg:p-10">
+            {/* Chart title */}
+            <h3 className="font-['Playfair_Display',serif] font-bold text-2xl lg:text-[28px] text-foreground text-center mb-2">
+              TERRAFREEZE® vs. Top Pain Cream
+            </h3>
 
-              {/* Legend */}
-              <div className="flex justify-center gap-6 mb-6 text-xs font-medium">
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-sm bg-accent" />
-                  <span className="text-foreground">TERRAFREEZE</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-sm bg-destructive" />
-                  <span className="text-foreground">Top Pain Cream</span>
-                </div>
+            {/* Callout */}
+            <p className="text-center text-destructive font-bold italic text-lg lg:text-xl mb-6">
+              Nearly <span className="text-2xl lg:text-3xl uppercase">TWICE</span> THE RELIEF!
+            </p>
+
+            {/* Legend */}
+            <div className="flex justify-center gap-8 mb-8 text-sm font-medium">
+              <div className="flex items-center gap-2">
+                <span className="w-4 h-4 rounded bg-accent" />
+                <span className="text-foreground">TERRAFREEZE</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-4 h-4 rounded bg-destructive" />
+                <span className="text-foreground">Top Pain Cream</span>
+              </div>
+            </div>
+
+            {/* Y-axis label */}
+            <div className="flex gap-3">
+              <div className="flex items-center">
+                <span
+                  className="text-[10px] tracking-[0.12em] text-muted-foreground font-medium whitespace-nowrap"
+                  style={{ writingMode: "vertical-lr", transform: "rotate(180deg)" }}
+                >
+                  SEVERITY OF PAIN (VAS)*
+                </span>
               </div>
 
-              {/* Chart */}
-              <svg viewBox="0 0 360 260" className="w-full h-auto">
-                {/* Y-axis labels & gridlines */}
-                {[0, 10, 20, 30, 40, 50].map((v) => {
-                  const y = 220 - barHeight(v);
-                  return (
-                    <g key={v}>
-                      <text x="28" y={y + 4} textAnchor="end" fill="hsl(215,16%,47%)" fontSize="10" fontFamily="DM Sans, sans-serif">{v}</text>
-                      <line x1="34" y1={y} x2="340" y2={y} stroke="hsl(216,18%,91%)" strokeWidth="0.5" />
-                    </g>
-                  );
-                })}
+              {/* Chart area */}
+              <div className="flex-1">
+                {/* Y-axis scale + bars */}
+                <div className="flex gap-2 w-full">
+                  {/* Y labels */}
+                  <div className="flex flex-col justify-between text-right text-xs text-muted-foreground pr-1" style={{ height: 240 }}>
+                    <span>50</span>
+                    <span>40</span>
+                    <span>30</span>
+                    <span>20</span>
+                    <span>10</span>
+                    <span>0</span>
+                  </div>
 
-                {/* Bar groups */}
-                {comparisonData.map((group, gi) => {
-                  const groupX = gi === 0 ? 70 : 210;
-                  const barW = 44;
-                  const gap = 8;
-
-                  const compH = barHeight(group.competitor);
-                  const tfH = barHeight(group.terrafreeze);
-
-                  return (
-                    <g key={group.label}>
-                      {/* Competitor bar (red) */}
-                      <rect
-                        x={groupX}
-                        y={220 - compH}
-                        width={barW}
-                        height={compH}
-                        rx="3"
-                        fill="hsl(0,84%,60%)"
+                  {/* Bars container */}
+                  <div className="flex-1 relative" style={{ height: 240 }}>
+                    {/* Horizontal grid lines */}
+                    {[0, 1, 2, 3, 4, 5].map((i) => (
+                      <div
+                        key={i}
+                        className="absolute w-full border-t border-border/60"
+                        style={{ top: `${(i / 5) * 100}%` }}
                       />
-                      {/* TERRAFREEZE bar (blue) */}
-                      <rect
-                        x={groupX + barW + gap}
-                        y={220 - tfH}
-                        width={barW}
-                        height={tfH}
-                        rx="3"
-                        fill="hsl(202,72%,35%)"
-                      />
+                    ))}
 
-                      {/* Value labels on bars */}
-                      <text
-                        x={groupX + barW / 2}
-                        y={220 - compH - 6}
-                        textAnchor="middle"
-                        fill="hsl(0,84%,60%)"
-                        fontSize="11"
-                        fontWeight="600"
-                        fontFamily="DM Sans, sans-serif"
-                      >
-                        {group.competitor}
-                      </text>
-                      <text
-                        x={groupX + barW + gap + barW / 2}
-                        y={220 - tfH - 6}
-                        textAnchor="middle"
-                        fill="hsl(202,72%,35%)"
-                        fontSize="11"
-                        fontWeight="600"
-                        fontFamily="DM Sans, sans-serif"
-                      >
-                        {group.terrafreeze}
-                      </text>
+                    {/* Bar groups */}
+                    <div className="relative h-full flex items-end justify-around px-4">
+                      {groups.map((group) => (
+                        <div key={group.label} className="flex flex-col items-center gap-0">
+                          {/* Two bars side by side */}
+                          <div className="flex items-end gap-2 sm:gap-3">
+                            {/* Before bar */}
+                            <div className="flex flex-col items-center">
+                              <span className="text-xs font-bold text-foreground mb-1">{group.before}</span>
+                              <div
+                                className={`w-12 sm:w-16 rounded-t-md ${group.label.includes("TERRA") ? "bg-accent" : "bg-destructive"}`}
+                                style={{ height: `${(group.before / maxVal) * 220}px` }}
+                              />
+                              <span className="text-[10px] sm:text-xs text-muted-foreground mt-2 font-medium">Before</span>
+                            </div>
 
-                      {/* X-axis label */}
-                      <text
-                        x={groupX + barW + gap / 2}
-                        y="240"
-                        textAnchor="middle"
-                        fill="hsl(215,16%,47%)"
-                        fontSize="11"
-                        fontFamily="DM Sans, sans-serif"
-                      >
-                        {group.label}
-                      </text>
-                    </g>
-                  );
-                })}
+                            {/* After bar */}
+                            <div className="flex flex-col items-center relative">
+                              <span className="text-xs font-bold text-foreground mb-1">{group.after}</span>
+                              <div
+                                className={`w-12 sm:w-16 rounded-t-md ${group.label.includes("TERRA") ? "bg-accent/70" : "bg-destructive/70"}`}
+                                style={{ height: `${(group.after / maxVal) * 220}px` }}
+                              />
+                              <span className="text-[10px] sm:text-xs text-muted-foreground mt-2 font-medium">Day 8</span>
 
-                {/* Reduction callouts */}
-                {/* Competitor: 32.3% */}
-                <g>
-                  <circle cx="113" cy={220 - barHeight(29) + barHeight(14)} r="18" fill="hsl(43,76%,46%)" />
-                  <text x="113" y={220 - barHeight(29) + barHeight(14) - 3} textAnchor="middle" fill="hsl(0,0%,100%)" fontSize="7" fontWeight="700" fontFamily="DM Sans, sans-serif">32.3%</text>
-                  <text x="113" y={220 - barHeight(29) + barHeight(14) + 6} textAnchor="middle" fill="hsl(0,0%,100%)" fontSize="5.5" fontFamily="DM Sans, sans-serif">reduction*</text>
-                </g>
+                              {/* Reduction badge */}
+                              <div className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2">
+                                <div className={`rounded-full flex flex-col items-center justify-center text-primary-foreground font-bold shadow-lg ${group.label.includes("TERRA") ? "w-16 h-16 sm:w-20 sm:h-20 bg-accent" : "w-14 h-14 sm:w-16 sm:h-16 bg-[hsl(43,76%,46%)]"}`}>
+                                  <span className={`${group.label.includes("TERRA") ? "text-sm sm:text-base" : "text-xs sm:text-sm"} leading-tight`}>
+                                    {group.reduction}
+                                  </span>
+                                  <span className="text-[8px] sm:text-[9px] opacity-90 leading-tight">
+                                    {group.label.includes("TERRA") ? "less pain!" : "reduction"}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 
-                {/* TERRAFREEZE: 59.5% */}
-                <g>
-                  <circle cx="295" cy={220 - barHeight(17) + barHeight(8)} r="22" fill="hsl(43,76%,46%)" />
-                  <text x="295" y={220 - barHeight(17) + barHeight(8) - 4} textAnchor="middle" fill="hsl(0,0%,100%)" fontSize="8" fontWeight="700" fontFamily="DM Sans, sans-serif">59.5%</text>
-                  <text x="295" y={220 - barHeight(17) + barHeight(8) + 5} textAnchor="middle" fill="hsl(0,0%,100%)" fontSize="5.5" fontFamily="DM Sans, sans-serif">reduction</text>
-                  <text x="295" y={220 - barHeight(17) + barHeight(8) + 12} textAnchor="middle" fill="hsl(0,0%,100%)" fontSize="5.5" fontFamily="DM Sans, sans-serif">in pain!</text>
-                </g>
+                          {/* Group label */}
+                          <p className={`text-xs sm:text-sm font-semibold mt-4 ${group.label.includes("TERRA") ? "text-accent" : "text-destructive"}`}>
+                            {group.label}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
 
-                {/* "Nearly TWICE THE RELIEF!" callout */}
-                <text x="240" y="25" textAnchor="middle" fill="hsl(0,84%,60%)" fontSize="11" fontWeight="700" fontFamily="DM Sans, sans-serif" fontStyle="italic">
-                  Nearly TWICE THE RELIEF!
-                </text>
-                {/* Arrow from callout to TERRAFREEZE Day 8 bar */}
-                <path d="M275,28 Q320,50 297,55" fill="none" stroke="hsl(0,84%,60%)" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
-                <defs>
-                  <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                    <path d="M0,0 L6,3 L0,6" fill="hsl(0,84%,60%)" />
-                  </marker>
-                </defs>
-              </svg>
-
-              <p className="text-center text-[10px] text-muted-foreground mt-3">
-                *Visual Analog Scale (100 mm)
-              </p>
+                {/* X axis label */}
+                <p className="text-center text-xs text-muted-foreground mt-4 tracking-wide">
+                  Treatment Period
+                </p>
+              </div>
             </div>
+
+            <p className="text-center text-[10px] text-muted-foreground mt-4">
+              *Visual Analog Scale (100 mm)
+            </p>
           </div>
         </div>
       </div>
