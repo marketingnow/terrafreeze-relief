@@ -39,13 +39,6 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        chart: {
-          generic: "hsl(var(--chart-generic))",
-          "generic-soft": "hsl(var(--chart-generic-soft))",
-          winner: "hsl(var(--chart-winner))",
-          "winner-soft": "hsl(var(--chart-winner-soft))",
-          badge: "hsl(var(--chart-badge))",
-        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

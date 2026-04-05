@@ -34,11 +34,6 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --chart-generic: 30 64% 58%;
-    --chart-generic-soft: 34 78% 71%;
-    --chart-winner: 199 75% 31%;
-    --chart-winner-soft: 198 61% 46%;
-    --chart-badge: 47 95% 58%;
   }
 
   .dark {
@@ -69,11 +64,6 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --chart-generic: 30 58% 54%;
-    --chart-generic-soft: 33 68% 64%;
-    --chart-winner: 199 70% 42%;
-    --chart-winner-soft: 198 58% 54%;
-    --chart-badge: 47 92% 56%;
   }
 }
 
