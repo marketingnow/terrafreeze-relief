@@ -14,17 +14,17 @@ const PainCrisisSection = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left — copy */}
           <div className="space-y-6">
-            <p className="text-primary-foreground/80 text-base lg:text-lg leading-relaxed">
+            <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
               <span className="font-bold text-accent">Chronic pain rates</span>{" "}
               have been climbing steadily for decades. Sedentary lifestyles, repetitive strain,
               screen-heavy routines, and aging joints are wearing down the body faster than ever.
             </p>
-            <p className="text-primary-foreground/80 text-base lg:text-lg leading-relaxed">
-              <span className="font-bold text-primary-foreground">The impact?</span>{" "}
+            <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
+              <span className="font-bold text-foreground">The impact?</span>{" "}
               Persistent aches and stiffness drain your energy, limit your mobility, and steal
               your focus — making it harder to stay active, productive, and present in everyday life.
             </p>
-            <p className="text-primary-foreground/80 text-base lg:text-lg leading-relaxed">
+            <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
               <span className="font-bold text-accent">The good news:</span>{" "}
               TERRAFREEZE helps you take back control with fast-acting, natural topical pain
               relief for sore muscles, stiff joints, and everyday aches — so you can move
