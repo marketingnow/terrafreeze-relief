@@ -5,7 +5,7 @@ const PainCrisisSection = () => {
     <section className="w-full py-20 lg:py-28 bg-secondary relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Headline */}
-        <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-primary-foreground text-center mb-14 lg:mb-16">
+        <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-foreground text-center mb-14 lg:mb-16">
           The Silent Pain Crisis:{" "}
           <span className="italic text-accent">A Modern Epidemic</span>
         </h2>
