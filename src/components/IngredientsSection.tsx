@@ -55,11 +55,11 @@ const IngredientsSection = () => {
               Health Canada Registered (NPN)
             </span>
           </div>
-          <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-primary-foreground mb-5">
+          <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-white mb-5">
             What's inside{" "}
-            <span className="italic text-accent-foreground">every jar.</span>
+            <span className="italic text-white">every jar.</span>
           </h2>
-          <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-white text-xl max-w-xl mx-auto leading-relaxed">
             4 clinically studied ingredients. Zero fillers. Trusted by 15,000+ Canadians coast to coast.
           </p>
         </div>
