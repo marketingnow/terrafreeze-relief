@@ -2,7 +2,7 @@ import comparisonChart from "@/assets/tf-comparison-chart.png";
 
 const PainCrisisSection = () => {
   return (
-    <section className="w-full py-20 lg:py-28 bg-foreground relative overflow-hidden">
+    <section className="w-full py-20 lg:py-28 bg-secondary relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Headline */}
         <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-primary-foreground text-center mb-14 lg:mb-16">
