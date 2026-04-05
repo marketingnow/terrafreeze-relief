@@ -31,14 +31,14 @@ const GuaranteeSection = () => {
           </div>
 
           {/* Right — Copy (matches image height) */}
-          <div className="flex flex-col justify-center space-y-5 text-muted-foreground text-[15px] leading-relaxed bg-secondary/30 p-8 lg:p-12 rounded-r-2xl lg:rounded-l-none rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl">
+          <div className="flex flex-col justify-center space-y-5 text-foreground text-[17px] leading-relaxed bg-secondary/30 p-8 lg:p-12 rounded-r-2xl lg:rounded-l-none rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl">
             <p>
               The ingredients speak for themselves — and so do the Canadians
               already using TERRAFREEZE every day.
             </p>
             <p>
               That's why we stand behind every jar with our{" "}
-              <span className="font-semibold text-foreground">
+              <span className="font-bold">
                 Empty Jar Guarantee
               </span>
               . Use the entire jar. Apply it daily. Put it to work on your
@@ -47,7 +47,7 @@ const GuaranteeSection = () => {
             </p>
             <p>
               If you're not feeling the difference, get a full refund.{" "}
-              <span className="font-semibold text-foreground">
+              <span className="font-bold">
                 No hoops, no hassle, no fine print.
               </span>
             </p>
@@ -58,7 +58,7 @@ const GuaranteeSection = () => {
               after day, you reach for the jar again — because it earned its
               spot in your routine.
             </p>
-            <p className="font-semibold text-foreground">
+            <p className="font-bold">
               Thousands of Canadians already have. Now it's your turn.
             </p>
 
