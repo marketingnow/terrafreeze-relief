@@ -1,4 +1,4 @@
-import { Droplets, Layers, ShieldCheck, ChevronRight } from "lucide-react";
+import { Droplets, Layers, ShieldCheck } from "lucide-react";
 
 const steps = [
   {
@@ -39,161 +39,84 @@ const steps = [
   },
 ];
 
+const HowItWorksCard = ({
+  icon: Icon,
+  step,
+  time,
+  title,
+  bullets,
+}: (typeof steps)[number]) => {
+  return (
+    <article className="relative z-10 flex flex-col items-center text-center">
+      <div className="relative mb-6">
+        <div className="absolute inset-2 rounded-full bg-accent/20 blur-2xl" />
+        <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-primary-foreground/10 bg-primary-foreground/5 backdrop-blur-sm">
+          <Icon className="h-9 w-9 text-accent" strokeWidth={1.65} />
+        </div>
+      </div>
+
+      <div className="mb-3 flex items-center gap-2.5">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:text-xs">
+          {step}
+        </span>
+        <span className="rounded-full border border-primary-foreground/10 bg-primary-foreground/6 px-3 py-1 text-[11px] font-medium text-primary-foreground/75 md:text-xs">
+          {time}
+        </span>
+      </div>
+
+      <h3 className="mb-5 text-[22px] font-bold tracking-[0.14em] text-primary-foreground">
+        {title}
+      </h3>
+
+      <ul className="w-full max-w-[290px] space-y-3 text-left">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-start gap-3 text-sm leading-6 text-primary-foreground/70">
+            <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <span>{bullet}</span>
+          </li>
+        ))}
+      </ul>
+    </article>
+  );
+};
+
 const HowItWorksSection = () => {
   return (
-    <section
-      className="w-full py-20 md:py-28 relative overflow-hidden"
-      style={{
-        background: "linear-gradient(180deg, #071821 0%, #0B2430 100%)",
-      }}
-    >
-      {/* Subtle icy glow */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse, rgba(25,191,234,0.06) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse, rgba(25,191,234,0.04) 0%, transparent 70%)",
-        }}
-      />
+    <section className="relative w-full overflow-hidden bg-gradient-to-b from-foreground via-primary to-primary py-20 md:py-24 lg:py-28">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-1/2 top-0 h-[24rem] w-[52rem] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute right-0 top-1/3 h-72 w-72 rounded-full bg-primary-foreground/5 blur-3xl" />
+      </div>
 
-      <div className="max-w-[1200px] mx-auto px-6 relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2
-            className="font-['Playfair_Display',serif] font-bold mb-4"
-            style={{ fontSize: "clamp(30px, 3.5vw, 46px)", color: "#F5FBFF" }}
-          >
-            How <span style={{ color: "#19BFEA" }}>TERRAFREEZE™</span> Works
+      <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
+        <div className="mx-auto mb-16 max-w-2xl text-center md:mb-20">
+          <h2 className="mb-4 font-['Playfair_Display',serif] text-[clamp(28px,3.5vw,46px)] font-bold leading-[1.1] text-primary-foreground">
+            How <span className="italic text-accent">TERRAFREEZE™</span> Works
           </h2>
-          <p style={{ fontSize: "16px", color: "#B9CBD6", lineHeight: 1.6 }}>
+          <p className="text-base leading-relaxed text-primary-foreground/60">
             Three simple steps to fast-acting, long-lasting pain relief.
           </p>
         </div>
 
-        {/* Steps row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12 relative">
-          {/* Connector line — desktop */}
-          <div
-            className="hidden md:block absolute top-[44px] left-[16%] right-[16%] z-0"
-            style={{
-              height: "1px",
-              background: "rgba(120, 210, 235, 0.22)",
-            }}
-          />
+        <div className="relative">
+          <div className="absolute left-[16%] right-[16%] top-12 hidden h-px bg-primary-foreground/15 md:block" />
 
-          {steps.map((item, idx) => (
-            <div key={item.step} className="relative z-10 flex flex-col items-center text-center">
-              {/* Icon circle */}
-              <div className="relative mb-6">
-                <div
-                  className="w-[88px] h-[88px] rounded-full flex items-center justify-center"
-                  style={{ background: "#0F2A36" }}
-                >
-                  <item.icon
-                    className="w-8 h-8"
-                    style={{ color: "#19BFEA" }}
-                    strokeWidth={1.5}
-                  />
-                </div>
-                {/* Glow behind icon */}
-                <div
-                  className="absolute inset-0 rounded-full pointer-events-none"
-                  style={{
-                    boxShadow: "0 0 30px rgba(25,191,234,0.15)",
-                  }}
-                />
-              </div>
-
-              {/* Arrow connector between icons — desktop */}
-              {idx < 2 && (
-                <div
-                  className="hidden md:flex absolute top-[34px] -right-[28px] lg:-right-[32px] z-20"
-                  style={{ color: "rgba(120, 210, 235, 0.35)" }}
-                >
-                  <ChevronRight className="w-5 h-5" strokeWidth={1.5} />
-                </div>
-              )}
-
-              {/* Step + time */}
-              <div className="flex items-center gap-2.5 mb-3">
-                <span
-                  className="font-semibold tracking-wider uppercase"
-                  style={{ fontSize: "12px", color: "#19BFEA", letterSpacing: "0.1em" }}
-                >
-                  {item.step}
-                </span>
-                <span
-                  className="px-2.5 py-1 rounded-full"
-                  style={{
-                    background: "rgba(25, 191, 234, 0.12)",
-                    color: "#66E0FF",
-                    fontSize: "12px",
-                    fontWeight: 600,
-                  }}
-                >
-                  {item.time}
-                </span>
-              </div>
-
-              {/* Title */}
-              <h3
-                className="font-bold mb-5"
-                style={{
-                  fontSize: "22px",
-                  color: "#F5FBFF",
-                  letterSpacing: "0.05em",
-                }}
-              >
-                {item.title}
-              </h3>
-
-              {/* Bullets */}
-              <ul className="space-y-2.5 text-left w-full max-w-[280px]">
-                {item.bullets.map((bullet, bi) => (
-                  <li
-                    key={bi}
-                    className="flex items-start gap-2.5"
-                    style={{ fontSize: "14px", color: "#B9CBD6", lineHeight: 1.55 }}
-                  >
-                    <span
-                      className="mt-[7px] w-[5px] h-[5px] rounded-full flex-shrink-0"
-                      style={{ background: "#58D2EE" }}
-                    />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8 lg:gap-12">
+            {steps.map((item) => (
+              <HowItWorksCard key={item.step} {...item} />
+            ))}
+          </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 md:mt-20 flex flex-col items-center gap-3">
+        <div className="mt-16 flex flex-col items-center gap-3 md:mt-20">
           <a
             href="#"
-            className="inline-flex items-center gap-2 px-9 py-3.5 rounded-lg font-medium text-white transition-all"
-            style={{
-              background: "linear-gradient(135deg, #19BFEA, #0F8FA8)",
-              fontSize: "15px",
-              boxShadow: "0 4px 20px rgba(25,191,234,0.25)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = "0 4px 28px rgba(25,191,234,0.4)";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "0 4px 20px rgba(25,191,234,0.25)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
+            className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-accent to-primary px-9 py-3.5 text-[15px] font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:-translate-y-0.5 hover:brightness-110"
           >
             Try It Risk-Free
           </a>
-          <span style={{ fontSize: "12px", color: "#7A9BAA" }}>
+          <span className="text-xs text-primary-foreground/45">
             🇨🇦 Ships Free Across Canada on Orders Over $60
           </span>
         </div>
