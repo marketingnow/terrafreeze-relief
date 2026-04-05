@@ -59,7 +59,7 @@ const IngredientsSection = () => {
             What's inside{" "}
             <span className="italic text-accent-foreground">every jar.</span>
           </h2>
-          <p className="text-primary-foreground/60 text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto leading-relaxed">
             4 clinically studied ingredients. Zero fillers. Trusted by 15,000+ Canadians coast to coast.
           </p>
         </div>
@@ -89,7 +89,7 @@ const IngredientsSection = () => {
                   <h3 className="font-['Playfair_Display',serif] font-bold text-2xl lg:text-3xl text-white leading-tight mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-white/70 text-xs lg:text-sm leading-relaxed max-w-[90%]">
+                  <p className="text-white/90 text-sm lg:text-base leading-relaxed max-w-[90%]">
                     {item.desc}
                   </p>
                 </div>
@@ -107,7 +107,7 @@ const IngredientsSection = () => {
         {/* Trust badge row */}
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 pt-10 border-t border-primary-foreground/10">
           {badges.map((b) => (
-            <div key={b.label} className="flex items-center gap-2 text-primary-foreground/50 text-xs lg:text-sm">
+            <div key={b.label} className="flex items-center gap-2 text-primary-foreground/80 text-sm lg:text-base font-medium">
               <b.icon className="w-4 h-4" />
               <span>{b.label}</span>
             </div>
