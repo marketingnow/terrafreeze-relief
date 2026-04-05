@@ -49,17 +49,17 @@ const IngredientsSection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Header */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-foreground/10 border border-primary-foreground/10 mb-6">
-            <ShieldCheck className="w-3.5 h-3.5 text-primary-foreground/70" />
-            <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-primary-foreground/70">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6">
+            <ShieldCheck className="w-3.5 h-3.5 text-white" />
+            <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-white">
               Health Canada Registered (NPN)
             </span>
           </div>
-          <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-primary-foreground mb-5">
+          <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-white mb-5">
             What's inside{" "}
-            <span className="italic text-accent-foreground">every jar.</span>
+            <span className="italic text-white">every jar.</span>
           </h2>
-          <p className="text-primary-foreground/80 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-white text-xl max-w-xl mx-auto leading-relaxed">
             4 clinically studied ingredients. Zero fillers. Trusted by 15,000+ Canadians coast to coast.
           </p>
         </div>
@@ -89,13 +89,13 @@ const IngredientsSection = () => {
                   <h3 className="font-['Playfair_Display',serif] font-bold text-2xl lg:text-3xl text-white leading-tight mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-white/90 text-sm lg:text-base leading-relaxed max-w-[90%]">
+                  <p className="text-white text-base lg:text-lg leading-relaxed max-w-[90%]">
                     {item.desc}
                   </p>
                 </div>
                 {/* Dosage badge */}
                 <div className="self-start">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-white text-xs font-semibold tracking-wide">
+                  <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 bg-white/15 backdrop-blur-sm text-white text-sm font-bold tracking-wide">
                     {item.dosage}
                   </span>
                 </div>
@@ -105,9 +105,9 @@ const IngredientsSection = () => {
         </div>
 
         {/* Trust badge row */}
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 pt-10 border-t border-primary-foreground/10">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 pt-10 border-t border-white/15">
           {badges.map((b) => (
-            <div key={b.label} className="flex items-center gap-2 text-primary-foreground/80 text-sm lg:text-base font-medium">
+            <div key={b.label} className="flex items-center gap-2 text-white text-base font-semibold">
               <b.icon className="w-4 h-4" />
               <span>{b.label}</span>
             </div>
