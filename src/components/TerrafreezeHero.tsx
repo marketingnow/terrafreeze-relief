@@ -50,14 +50,14 @@ const TerrafreezeHero = () => {
             </div>
             <div className="flex flex-col gap-0.5">
               <Stars />
-              <span className="text-muted-foreground text-xs">15,000+ Canadians</span>
+              <span className="text-foreground text-sm font-medium">15,000+ Canadians</span>
             </div>
           </div>
 
           {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-5">
             <span className="w-7 h-0.5 rounded-full bg-accent" />
-            <span className="text-xs font-medium tracking-[0.12em] uppercase text-accent">
+            <span className="text-sm font-semibold tracking-[0.12em] uppercase text-accent">
               Topical Pain Relief · Health Canada Registered
             </span>
           </div>
@@ -71,7 +71,7 @@ const TerrafreezeHero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-muted-foreground text-base leading-relaxed mb-6 max-w-lg">
+          <p className="text-foreground text-lg leading-relaxed mb-6 max-w-lg font-medium">
             Menthol, Arnica, MSM and Emu Oil — applied where it hurts, felt where it counts.
           </p>
 
@@ -80,7 +80,7 @@ const TerrafreezeHero = () => {
             {pills.map((p) => (
               <span
                 key={p}
-                className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-accent/35 bg-[hsl(0,0%,100%,0.6)] backdrop-blur-sm text-accent text-xs font-medium"
+                className="inline-flex items-center px-4 py-2 rounded-full border border-accent/35 bg-[hsl(0,0%,100%,0.6)] backdrop-blur-sm text-accent text-sm font-semibold"
               >
                 {p}
               </span>
@@ -91,24 +91,24 @@ const TerrafreezeHero = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-medium text-[15px] rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-semibold text-base rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
             >
               Try TERRAFREEZE →
             </a>
             <a
               href="#"
-              className="text-sm text-muted-foreground underline underline-offset-4 decoration-muted-foreground/40 hover:text-primary transition-colors"
+              className="text-base text-foreground underline underline-offset-4 decoration-foreground/40 hover:text-primary transition-colors font-medium"
             >
               See all packages
             </a>
           </div>
 
           {/* Trust */}
-          <div className="flex items-center text-xs text-muted-foreground">
+          <div className="flex items-center text-sm font-medium text-foreground">
             <span>180-Day Guarantee</span>
-            <span className="w-1 h-1 rounded-full bg-muted-foreground/50 mx-2.5" />
+            <span className="w-1 h-1 rounded-full bg-foreground/50 mx-2.5" />
             <span>Free Shipping $60+</span>
-            <span className="w-1 h-1 rounded-full bg-muted-foreground/50 mx-2.5" />
+            <span className="w-1 h-1 rounded-full bg-foreground/50 mx-2.5" />
             <span>Ships from Canada</span>
           </div>
         </div>
