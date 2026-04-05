@@ -1,25 +1,27 @@
-import { Droplets, Layers, ShieldCheck } from "lucide-react";
 import terrafreezeJar from "@/assets/terrafreeze-jar.webp";
+import stepApply from "@/assets/step-apply.jpg";
+import stepPenetrate from "@/assets/step-penetrate.jpg";
+import stepRelief from "@/assets/step-relief.jpg";
 
 const steps = [
   {
-    icon: Droplets,
     num: "1",
     title: "Apply",
+    image: stepApply,
     description:
       "Massage a small amount onto the sore area. Absorbs quickly with no greasy residue — cooling comfort starts on contact.",
   },
   {
-    icon: Layers,
     num: "2",
     title: "Penetrate",
+    image: stepPenetrate,
     description:
       "Emu Oil helps carry Menthol, Arnica, and MSM deeper — reaching joints, muscles, and tendons where basic creams can't.",
   },
   {
-    icon: ShieldCheck,
     num: "3",
     title: "Relief",
+    image: stepRelief,
     description:
       "Feel cooling relief that lasts for hours. Stay active throughout the day with no pills required. Reapply as needed.",
   },
@@ -34,11 +36,6 @@ const HowItWorksSection = () => {
           "linear-gradient(180deg, hsl(210 30% 96%) 0%, hsl(210 25% 98%) 50%, hsl(0 0% 100%) 100%)",
       }}
     >
-      {/* Subtle ambient glow */}
-      <div className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full opacity-30"
-        style={{ background: "radial-gradient(circle, hsl(202 72% 35% / 0.12), transparent 70%)" }}
-      />
-
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-12">
         {/* Eyebrow */}
         <div className="mb-4">
@@ -48,33 +45,42 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Headline */}
-        <h2 className="mb-12 max-w-lg font-['Playfair_Display',serif] text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] text-foreground md:mb-16">
+        <h2 className="mb-14 max-w-lg font-['Playfair_Display',serif] text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] text-foreground md:mb-16">
           The Simple Routine That{" "}
           <span className="italic text-accent">Ends Your Pain</span>
         </h2>
 
-        {/* Two-column layout */}
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-8">
+        {/* Two-column: steps left, product right */}
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
           {/* Left — Steps */}
-          <div className="space-y-10">
+          <div className="space-y-8">
             {steps.map((step) => (
-              <div key={step.num} className="flex gap-5">
-                {/* Number badge */}
-                <div className="flex flex-shrink-0 flex-col items-center">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-sm font-bold text-accent-foreground">
+              <div
+                key={step.num}
+                className="flex gap-5 rounded-2xl border border-border/60 bg-card/60 p-4 backdrop-blur-sm transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 sm:gap-6 sm:p-5"
+              >
+                {/* Photo */}
+                <div className="relative flex-shrink-0">
+                  <img
+                    src={step.image}
+                    alt={`Step ${step.num}: ${step.title}`}
+                    loading="lazy"
+                    width={640}
+                    height={640}
+                    className="h-28 w-28 rounded-xl object-cover sm:h-36 sm:w-36"
+                  />
+                  {/* Number badge overlay */}
+                  <span className="absolute -left-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground shadow-md">
                     {step.num}
                   </span>
-                  {step.num !== "3" && (
-                    <div className="mt-2 h-full w-px bg-border" />
-                  )}
                 </div>
 
-                {/* Content */}
-                <div className="pb-2">
-                  <h3 className="mb-1.5 text-lg font-bold text-foreground">
+                {/* Text content */}
+                <div className="flex flex-col justify-center">
+                  <h3 className="mb-1.5 text-lg font-bold text-foreground sm:text-xl">
                     {step.title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-muted-foreground">
+                  <p className="text-sm leading-relaxed text-muted-foreground sm:text-[15px]">
                     {step.description}
                   </p>
                 </div>
@@ -83,11 +89,11 @@ const HowItWorksSection = () => {
           </div>
 
           {/* Right — Product image */}
-          <div className="flex items-center justify-center lg:justify-end">
+          <div className="hidden items-center justify-center lg:flex">
             <img
               src={terrafreezeJar}
-              alt="TERRAFREEZE Extra Strength Pain Relief Cream jar with natural ingredients"
-              className="w-full max-w-[420px] drop-shadow-2xl"
+              alt="TERRAFREEZE Extra Strength Pain Relief Cream jar"
+              className="w-[340px] drop-shadow-2xl"
             />
           </div>
         </div>
