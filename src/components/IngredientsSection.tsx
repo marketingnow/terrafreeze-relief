@@ -95,7 +95,7 @@ const IngredientsSection = () => {
                 </div>
                 {/* Dosage badge */}
                 <div className="self-start">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-white text-xs font-semibold tracking-wide">
+                  <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 bg-white/15 backdrop-blur-sm text-white text-sm font-bold tracking-wide">
                     {item.dosage}
                   </span>
                 </div>
