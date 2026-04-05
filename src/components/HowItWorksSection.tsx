@@ -1,40 +1,40 @@
-import { Droplets, Layers, ShieldCheck, ArrowRight } from "lucide-react";
+import { Droplets, Layers, ShieldCheck } from "lucide-react";
 
 const steps = [
   {
     icon: Droplets,
-    step: "01",
-    title: "APPLY",
+    step: "STEP 01",
     time: "5 seconds",
+    title: "APPLY",
     bullets: [
       "Massage a small amount onto the sore area",
-      "Non-greasy formula absorbs instantly",
-      "No residue left on clothes or skin",
-      "Pleasant cooling sensation on contact",
+      "Absorbs quickly with no greasy residue",
+      "Won't stain skin or clothing",
+      "Cooling comfort starts on contact",
     ],
   },
   {
     icon: Layers,
-    step: "02",
-    title: "PENETRATE",
+    step: "STEP 02",
     time: "2 minutes",
+    title: "PENETRATE",
     bullets: [
-      "Emu Oil drives actives deep past the skin barrier",
-      "Menthol, Arnica & MSM reach inflamed tissue",
-      "Targets joints, muscles and tendons directly",
-      "Works where generic creams can't reach",
+      "Emu Oil helps carry key ingredients deeper",
+      "Menthol, Arnica, and MSM reach the target area",
+      "Supports joints, muscles, and tendons directly",
+      "Goes beyond the surface where basic creams stop",
     ],
   },
   {
     icon: ShieldCheck,
-    step: "03",
-    title: "RELIEF",
+    step: "STEP 03",
     time: "Hours",
+    title: "RELIEF",
     bullets: [
       "Feel cooling relief that lasts for hours",
-      "Stay active — walk, garden, play with grandkids",
-      "No pills, no prescriptions, no side effects",
-      "Reapply as needed throughout the day",
+      "Stay active throughout the day",
+      "Simple topical support with no pills required",
+      "Reapply as needed for continued comfort",
     ],
   },
 ];
@@ -42,95 +42,75 @@ const steps = [
 const HowItWorksSection = () => {
   return (
     <section
-      className="w-full relative overflow-hidden"
+      className="w-full py-20 md:py-24"
       style={{
-        background: "linear-gradient(180deg, #E8F4FD 0%, #F0FAFA 40%, #FFFFFF 100%)",
-        padding: "90px 0 80px",
+        background: "linear-gradient(180deg, #F4F8FB 0%, #EDF3F8 50%, #F8FAFB 100%)",
       }}
     >
-      {/* Frost texture overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(circle at 20% 30%, rgba(10,138,138,0.04) 0%, transparent 50%),
-                            radial-gradient(circle at 80% 70%, rgba(27,154,170,0.03) 0%, transparent 50%),
-                            radial-gradient(circle at 50% 10%, rgba(10,138,138,0.03) 0%, transparent 40%)`,
-        }}
-      />
-
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-14">
           <h2
-            className="font-['Playfair_Display',serif] font-bold leading-tight mb-4"
-            style={{ fontSize: "clamp(32px, 4vw, 46px)", color: "#2D2D2D" }}
+            className="font-['Playfair_Display',serif] font-bold mb-3"
+            style={{ fontSize: "clamp(28px, 3.5vw, 42px)", color: "#2D2D2D" }}
           >
-            How Does{" "}
-            <span style={{ color: "#0A8A8A" }}>TERRAFREEZE™</span>{" "}
-            Work?
+            How <span style={{ color: "#0A8A8A" }}>TERRAFREEZE™</span> Works
           </h2>
-          <p
-            className="max-w-xl mx-auto"
-            style={{ fontSize: "17px", color: "#777", fontWeight: 400, lineHeight: 1.6 }}
-          >
-            Three simple steps to fast-acting, long-lasting natural pain relief.
+          <p style={{ fontSize: "16px", color: "#888", lineHeight: 1.6 }}>
+            Three simple steps to fast-acting, long-lasting pain relief.
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-6 relative">
-          {/* Connecting dashed line (desktop only) */}
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+          {/* Connector line — desktop only */}
           <div
-            className="hidden md:block absolute top-[52px] left-[16.66%] right-[16.66%] z-0"
+            className="hidden md:block absolute top-[52px] left-[20%] right-[20%] z-0"
             style={{
-              height: "2px",
-              backgroundImage: "repeating-linear-gradient(90deg, #0A8A8A 0px, #0A8A8A 8px, transparent 8px, transparent 18px)",
-              opacity: 0.35,
+              height: "1px",
+              background: "linear-gradient(90deg, transparent, #B8CDD9 15%, #B8CDD9 85%, transparent)",
             }}
           />
 
-          {steps.map((item, index) => (
-            <div key={item.step} className="relative z-10 flex flex-col items-center">
-              {/* Icon circle with frost glow */}
-              <div className="relative mb-6">
-                <div
-                  className="absolute inset-0 rounded-full"
-                  style={{
-                    background: "radial-gradient(circle, rgba(10,138,138,0.12) 0%, transparent 70%)",
-                    transform: "scale(1.8)",
-                  }}
+          {steps.map((item) => (
+            <div
+              key={item.step}
+              className="relative z-10 rounded-2xl p-7 flex flex-col items-center text-center"
+              style={{
+                background: "rgba(255,255,255,0.9)",
+                border: "1px solid #DFE8EE",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+              }}
+            >
+              {/* Icon */}
+              <div
+                className="w-[76px] h-[76px] rounded-full flex items-center justify-center mb-5"
+                style={{
+                  background: "#EFF5F9",
+                  border: "1px solid #D9E4EC",
+                }}
+              >
+                <item.icon
+                  className="w-7 h-7"
+                  style={{ color: "#1B9AAA" }}
+                  strokeWidth={1.6}
                 />
-                <div
-                  className="relative w-[88px] h-[88px] rounded-full flex items-center justify-center"
-                  style={{
-                    background: "rgba(255,255,255,0.85)",
-                    backdropFilter: "blur(8px)",
-                    border: "1.5px solid rgba(10,138,138,0.15)",
-                    boxShadow: "0 4px 24px rgba(10,138,138,0.1), 0 1px 4px rgba(0,0,0,0.04)",
-                  }}
-                >
-                  <item.icon
-                    className="w-8 h-8"
-                    style={{ color: "#1B9AAA" }}
-                    strokeWidth={1.8}
-                  />
-                </div>
               </div>
 
-              {/* Step number + time */}
-              <div className="flex items-center gap-3 mb-2">
+              {/* Step + timing pill */}
+              <div className="flex items-center gap-2.5 mb-2">
                 <span
-                  className="font-bold"
-                  style={{ fontSize: "15px", color: "#0A8A8A", letterSpacing: "0.05em" }}
+                  className="font-semibold tracking-wider"
+                  style={{ fontSize: "12px", color: "#0A8A8A", letterSpacing: "0.08em" }}
                 >
-                  STEP {item.step}
+                  {item.step}
                 </span>
                 <span
-                  className="inline-flex items-center px-3 py-0.5 rounded-full"
+                  className="px-2.5 py-0.5 rounded-full"
                   style={{
-                    background: "rgba(10,138,138,0.08)",
-                    color: "#0A8A8A",
-                    fontSize: "13px",
+                    background: "#E8EFF4",
+                    color: "#5A7A8A",
+                    fontSize: "11px",
                     fontWeight: 600,
                   }}
                 >
@@ -142,72 +122,50 @@ const HowItWorksSection = () => {
               <h3
                 className="font-bold mb-4"
                 style={{
-                  fontSize: "clamp(20px, 2vw, 24px)",
+                  fontSize: "20px",
                   color: "#2D2D2D",
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.04em",
                 }}
               >
                 {item.title}
               </h3>
 
-              {/* Bullets — card on mobile */}
-              <div
-                className="w-full rounded-xl md:rounded-none md:bg-transparent md:border-0 md:shadow-none md:p-0 p-5"
-                style={{
-                  background: "rgba(255,255,255,0.7)",
-                  border: "1px solid rgba(10,138,138,0.12)",
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
-                }}
-              >
-                <ul className="space-y-2.5">
-                  {item.bullets.map((bullet, bi) => (
-                    <li
-                      key={bi}
-                      className="flex items-start gap-2"
-                      style={{ fontSize: "15px", color: "#555", lineHeight: 1.55 }}
-                    >
-                      <span
-                        className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0"
-                        style={{ background: "#0A8A8A" }}
-                      />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Arrow between steps on desktop */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute -right-3 lg:-right-1 top-[52px] z-20">
-                  <div
-                    className="w-7 h-7 rounded-full flex items-center justify-center"
-                    style={{ background: "#0A8A8A" }}
+              {/* Bullets */}
+              <ul className="space-y-2 text-left w-full">
+                {item.bullets.map((bullet, bi) => (
+                  <li
+                    key={bi}
+                    className="flex items-start gap-2.5"
+                    style={{ fontSize: "14px", color: "#555", lineHeight: 1.5 }}
                   >
-                    <ArrowRight className="w-3.5 h-3.5 text-white" />
-                  </div>
-                </div>
-              )}
+                    <span
+                      className="mt-[7px] w-[5px] h-[5px] rounded-full flex-shrink-0"
+                      style={{ background: "#A8C4D0" }}
+                    />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-16 flex flex-col items-center gap-3">
+        <div className="mt-14 flex flex-col items-center gap-2.5">
           <a
             href="#"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg font-medium text-white transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-lg font-medium text-white transition-colors"
             style={{
               background: "#0A8A8A",
               fontSize: "15px",
-              boxShadow: "0 4px 16px rgba(10,138,138,0.25)",
+              boxShadow: "0 2px 10px rgba(10,138,138,0.2)",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#087878")}
             onMouseLeave={(e) => (e.currentTarget.style.background = "#0A8A8A")}
           >
             Try It Risk-Free
-            <ArrowRight className="w-4 h-4" />
           </a>
-          <span style={{ fontSize: "13px", color: "#999" }}>
+          <span style={{ fontSize: "12px", color: "#999" }}>
             🇨🇦 Ships Free Across Canada on Orders Over $60
           </span>
         </div>
