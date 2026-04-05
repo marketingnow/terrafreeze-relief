@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
-import collage from "@/assets/guarantee-collage.png";
+import collage from "@/assets/guarantee-collage.jpg";
 
 const GuaranteeSection = () => {
   return (
-    <section className="w-full py-20 lg:py-28 relative overflow-hidden bg-background">
+    <section className="w-full py-20 lg:py-28 bg-background">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Eyebrow */}
         <div className="text-center mb-4">
@@ -18,20 +18,20 @@ const GuaranteeSection = () => {
           Money Back
         </h2>
 
-        {/* Two-column: collage left, text right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* Left — Collage */}
-          <div className="flex justify-center lg:justify-start">
+        {/* Two-column: equal height */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+          {/* Left — Collage (fills its column) */}
+          <div className="overflow-hidden rounded-l-2xl lg:rounded-r-none rounded-2xl lg:rounded-bl-2xl">
             <img
               src={collage}
               alt="Happy TERRAFREEZE customers showing their results"
-              className="w-full max-w-md lg:max-w-none rounded-2xl"
+              className="w-full h-full object-cover"
               loading="lazy"
             />
           </div>
 
-          {/* Right — Copy */}
-          <div className="space-y-5 text-muted-foreground text-[15px] leading-relaxed">
+          {/* Right — Copy (matches image height) */}
+          <div className="flex flex-col justify-center space-y-5 text-muted-foreground text-[15px] leading-relaxed bg-secondary/30 p-8 lg:p-12 rounded-r-2xl lg:rounded-l-none rounded-2xl lg:rounded-tr-2xl lg:rounded-br-2xl">
             <p>
               The ingredients speak for themselves — and so do the Canadians
               already using TERRAFREEZE every day.
@@ -62,10 +62,9 @@ const GuaranteeSection = () => {
               Thousands of Canadians already have. Now it's your turn.
             </p>
 
-            {/* CTA */}
             <a
               href="#"
-              className="inline-flex items-center gap-2 mt-3 px-8 py-3.5 bg-accent text-accent-foreground rounded-lg font-medium text-[15px] shadow-lg shadow-accent/20 transition-all hover:-translate-y-0.5 hover:brightness-110"
+              className="inline-flex items-center gap-2 mt-3 w-fit px-8 py-3.5 bg-accent text-accent-foreground rounded-lg font-medium text-[15px] shadow-lg shadow-accent/20 transition-all hover:-translate-y-0.5 hover:brightness-110"
             >
               Shop TERRAFREEZE — Ships Free Across Canada
               <ArrowRight className="w-4 h-4" />
