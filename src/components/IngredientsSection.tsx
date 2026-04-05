@@ -89,7 +89,7 @@ const IngredientsSection = () => {
                   <h3 className="font-['Playfair_Display',serif] font-bold text-2xl lg:text-3xl text-white leading-tight mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-white/90 text-sm lg:text-base leading-relaxed max-w-[90%]">
+                  <p className="text-white text-base lg:text-lg leading-relaxed max-w-[90%]">
                     {item.desc}
                   </p>
                 </div>
