@@ -105,9 +105,9 @@ const IngredientsSection = () => {
         </div>
 
         {/* Trust badge row */}
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 pt-10 border-t border-primary-foreground/10">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 pt-10 border-t border-white/15">
           {badges.map((b) => (
-            <div key={b.label} className="flex items-center gap-2 text-primary-foreground/80 text-sm lg:text-base font-medium">
+            <div key={b.label} className="flex items-center gap-2 text-white text-base font-semibold">
               <b.icon className="w-4 h-4" />
               <span>{b.label}</span>
             </div>
