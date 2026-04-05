@@ -49,9 +49,9 @@ const IngredientsSection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Header */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-foreground/10 border border-primary-foreground/10 mb-6">
-            <ShieldCheck className="w-3.5 h-3.5 text-primary-foreground/70" />
-            <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-primary-foreground/70">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6">
+            <ShieldCheck className="w-3.5 h-3.5 text-white" />
+            <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-white">
               Health Canada Registered (NPN)
             </span>
           </div>
