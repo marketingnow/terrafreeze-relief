@@ -37,32 +37,22 @@ const TerrafreezeHero = () => {
           {/* Social proof */}
           <div className="flex items-center gap-3 mb-6">
             <div className="flex -space-x-2.5">
-              {[
-                { initials: "S", bg: "hsl(202,72%,35%)" },
-                { initials: "M", bg: "hsl(207,76%,24%)" },
-                { initials: "J", bg: "hsl(202,60%,45%)" },
-              ].map((a, i) => (
-                <div
+              {[avatar1, avatar2, avatar3].map((src, i) => (
+                <img
                   key={i}
-                  className="w-9 h-9 rounded-full border-2 border-[hsl(0,0%,100%)] flex items-center justify-center text-[hsl(0,0%,100%)] text-xs font-medium"
-                  style={{ background: a.bg, zIndex: 3 - i }}
-                >
-                  {a.initials}
-                </div>
+                  src={src}
+                  alt=""
+                  className="w-9 h-9 rounded-full border-2 border-[hsl(0,0%,100%)] object-cover"
+                  style={{ zIndex: 3 - i }}
+                  width={36}
+                  height={36}
+                />
               ))}
             </div>
             <div className="flex flex-col gap-0.5">
               <Stars />
-              <span className="text-foreground text-sm font-medium">15,000+ Canadians</span>
+              <span className="text-foreground text-sm font-medium">Loved By 15,000 Canadians</span>
             </div>
-          </div>
-
-          {/* Eyebrow */}
-          <div className="flex items-center gap-3 mb-5">
-            <span className="w-7 h-0.5 rounded-full bg-accent" />
-            <span className="text-sm font-semibold tracking-[0.12em] uppercase text-accent">
-              Topical Pain Relief · Health Canada Registered
-            </span>
           </div>
 
           {/* Headline */}
