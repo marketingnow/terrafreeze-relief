@@ -23,6 +23,8 @@ const TerrafreezeHero = () => {
       className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${heroBgFull})`, backgroundPosition: "right bottom" }}
     >
+      {/* Left gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent pointer-events-none" />
 
       {/* Content — left side only, product is in the background image */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
