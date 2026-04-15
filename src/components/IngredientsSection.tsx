@@ -55,7 +55,7 @@ const IngredientsSection = () => {
               Health Canada Registered (NPN)
             </span>
           </div>
-          <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-white mb-5">
+          <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-white mb-5">
             What's inside{" "}
             <span className="italic text-white">every jar.</span>
           </h2>
@@ -86,7 +86,7 @@ const IngredientsSection = () => {
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col justify-between p-5 lg:p-6">
                 <div>
-                  <h3 className="font-['Playfair_Display',serif] font-bold text-2xl lg:text-3xl text-white leading-tight mb-2">
+                  <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-2xl lg:text-3xl text-white leading-tight mb-2">
                     {item.name}
                   </h3>
                   <p className="text-white text-base lg:text-lg leading-relaxed max-w-[90%]">
