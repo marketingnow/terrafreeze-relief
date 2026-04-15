@@ -61,7 +61,7 @@ const TerrafreezeHero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-foreground text-lg leading-relaxed mb-8 max-w-lg font-medium">
+          <p className="text-foreground text-[18px] leading-snug mb-8 max-w-lg font-medium">
             Our 18-ingredient cooling formula delivers fast-acting, targeted comfort — working right at the source for sore joints, tight muscles, and everyday aches.
           </p>
 
