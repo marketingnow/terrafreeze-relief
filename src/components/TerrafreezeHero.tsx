@@ -20,8 +20,8 @@ const Stars = () => (
 const TerrafreezeHero = () => {
   return (
     <section
-      className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBgFull})`, backgroundPosition: "right bottom" }}
+      className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBgFull})`, backgroundPosition: "right bottom", backgroundSize: "85% auto" }}
     >
       {/* Left gradient overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 via-40% to-transparent pointer-events-none" />
