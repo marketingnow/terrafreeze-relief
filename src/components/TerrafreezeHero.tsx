@@ -29,11 +29,11 @@ const TerrafreezeHero = () => {
           {/* Social proof */}
           <div className="flex items-center gap-1.5 mb-3">
             <Stars />
-            <span className="font-['Space_Grotesk',sans-serif] text-[18px] font-bold tracking-tight text-[hsl(0,0%,0%)]">4.9/5 — 2,400+ verified reviews</span>
+            <span className="font-['Plus_Jakarta_Sans',sans-serif] text-[18px] font-bold tracking-tight text-[hsl(0,0%,0%)]">4.9/5 — 2,400+ verified reviews</span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-['Space_Grotesk',sans-serif] font-bold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
+          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
             <span>Finally — a pain cream</span>
             <br />
             <span>{"built for "}</span>
@@ -43,7 +43,7 @@ const TerrafreezeHero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="font-['Space_Grotesk',sans-serif] text-foreground text-[18px] leading-snug mb-8 max-w-lg font-medium">
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] text-foreground text-[18px] leading-snug mb-8 max-w-lg font-medium">
             Our 18-ingredient cooling formula delivers fast-acting, targeted comfort — working right at the source for sore joints, tight muscles, and everyday aches.
           </p>
 
@@ -55,7 +55,7 @@ const TerrafreezeHero = () => {
             >
               TRY TERRAFREEZE TODAY →
             </a>
-            <p className="font-['Space_Grotesk',sans-serif] text-sm font-medium text-foreground text-center mt-3">
+            <p className="font-['Plus_Jakarta_Sans',sans-serif] text-sm font-medium text-foreground text-center mt-3">
               180-Day Guarantee. Love it or we'll refund every penny.
             </p>
           </div>
