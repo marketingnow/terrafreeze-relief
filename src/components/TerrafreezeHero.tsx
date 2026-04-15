@@ -55,7 +55,9 @@ const TerrafreezeHero = () => {
 
           {/* Headline */}
           <h1 className="font-['Playfair_Display',serif] font-bold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
-            Finally — a pain cream <br /> built for{" "}
+            <span>Finally — a pain cream</span>
+            <br />
+            <span>{"built for "}</span>
             <span className="bg-gradient-to-br from-accent to-primary bg-clip-text text-transparent">
               Canadian life.
             </span>
