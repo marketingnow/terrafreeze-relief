@@ -1,4 +1,5 @@
-import heroBgFull from "@/assets/hero-bg-full.jpg";
+import heroBgIce from "@/assets/hero-bg-ice-product.jpg";
+import productJar from "@/assets/product-jar.png";
 import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
 import avatar3 from "@/assets/avatar-3.jpg";
@@ -20,18 +21,19 @@ const Stars = () => (
 const TerrafreezeHero = () => {
   return (
     <section className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center overflow-hidden">
-      {/* Full-bleed background with product baked in */}
+      {/* Ice background */}
       <img
-        src={heroBgFull}
+        src={heroBgIce}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover object-right"
+        className="absolute inset-0 w-full h-full object-cover"
         width={1920}
         height={1080}
       />
 
-      {/* Content — left side only, product is in the background image */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
-        <div className="max-w-xl">
+      {/* Content wrapper */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16 flex items-center">
+        {/* Left: text content */}
+        <div className="max-w-xl flex-shrink-0">
           {/* Social proof */}
           <div className="flex items-center gap-3 mb-6">
             <div className="flex -space-x-2.5">
@@ -82,6 +84,15 @@ const TerrafreezeHero = () => {
           <p className="text-sm font-medium text-foreground">
             180-Day Empty Jar Guarantee. Love it or we'll refund every penny.
           </p>
+        </div>
+
+        {/* Right: product jar — separate image for precise sizing */}
+        <div className="hidden md:flex flex-1 justify-center items-end ml-8">
+          <img
+            src={productJar}
+            alt="Terrafreeze Extra Strength Pain Relief Cream"
+            className="w-[340px] lg:w-[400px] max-h-[480px] object-contain drop-shadow-2xl"
+          />
         </div>
       </div>
     </section>
