@@ -19,7 +19,7 @@ const Stars = () => (
 
 const TerrafreezeHero = () => {
   return (
-    <section className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center pb-16">
       {/* Full-bleed background with product baked in */}
       <img
         src={heroBgFull}
