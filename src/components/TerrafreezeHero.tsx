@@ -9,7 +9,7 @@ const StarIcon = ({ className }: { className?: string }) => (
 const Stars = () => (
   <div className="flex gap-0.5">
     {[...Array(5)].map((_, i) => (
-      <StarIcon key={i} className="w-4 h-4 text-[hsl(43,76%,46%)]" />
+      <StarIcon key={i} className="w-5 h-5 text-[hsl(43,76%,46%)]" />
     ))}
   </div>
 );
@@ -29,8 +29,7 @@ const TerrafreezeHero = () => {
           {/* Social proof */}
           <div className="flex items-center gap-1.5 mb-3">
             <Stars />
-            <span className="text-[13px] font-bold tracking-tight text-foreground">4.9/5</span>
-            <span className="text-[13px] font-semibold text-foreground/70 tracking-tight">— 2,400+ verified reviews</span>
+            <span className="text-[18px] font-bold tracking-tight text-[hsl(0,0%,0%)]">4.9/5 — 2,400+ verified reviews</span>
           </div>
 
           {/* Headline */}
