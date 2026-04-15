@@ -1,4 +1,4 @@
-import heroBgIce from "@/assets/hero-bg-energy.jpg";
+import heroBgIce from "@/assets/hero-bg-ice.jpg";
 import productJar from "@/assets/product-jar.png";
 import avatar1 from "@/assets/avatar-1.jpg";
 import avatar2 from "@/assets/avatar-2.jpg";
