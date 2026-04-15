@@ -17,8 +17,6 @@ const Stars = () => (
   </div>
 );
 
-const pills = ["Menthol", "Arnica", "MSM", "Emu Oil", "Methyl Salicylate"];
-
 const TerrafreezeHero = () => {
   return (
     <section className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center overflow-hidden">
@@ -57,53 +55,31 @@ const TerrafreezeHero = () => {
 
           {/* Headline */}
           <h1 className="font-['Playfair_Display',serif] font-bold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
-            Targeted relief, built for{" "}
-            <span className="italic bg-gradient-to-br from-accent to-primary bg-clip-text text-transparent">
-              real Canadians.
+            Finally — a pain cream built for{" "}
+            <span className="bg-gradient-to-br from-accent to-primary bg-clip-text text-transparent">
+              Canadian life.
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-foreground text-lg leading-relaxed mb-6 max-w-lg font-medium">
-            Menthol, Arnica, MSM and Emu Oil — applied where it hurts, felt where it counts.
+          <p className="text-foreground text-lg leading-relaxed mb-8 max-w-lg font-medium">
+            Our 18-ingredient cooling formula delivers fast-acting, targeted comfort — working right at the source for sore joints, tight muscles, and everyday aches.
           </p>
 
-          {/* Pills */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            {pills.map((p) => (
-              <span
-                key={p}
-                className="inline-flex items-center px-4 py-2 rounded-full border border-accent/35 bg-[hsl(0,0%,100%,0.6)] backdrop-blur-sm text-accent text-sm font-semibold"
-              >
-                {p}
-              </span>
-            ))}
-          </div>
-
           {/* CTA */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+          <div className="mb-6">
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground font-semibold text-base rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
+              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 bg-primary text-primary-foreground font-semibold text-base rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
             >
-              Try TERRAFREEZE →
-            </a>
-            <a
-              href="#"
-              className="text-base text-foreground underline underline-offset-4 decoration-foreground/40 hover:text-primary transition-colors font-medium"
-            >
-              See all packages
+              TRY TERRAFREEZE TODAY →
             </a>
           </div>
 
           {/* Trust */}
-          <div className="flex items-center text-sm font-medium text-foreground">
-            <span>180-Day Guarantee</span>
-            <span className="w-1 h-1 rounded-full bg-foreground/50 mx-2.5" />
-            <span>Free Shipping $60+</span>
-            <span className="w-1 h-1 rounded-full bg-foreground/50 mx-2.5" />
-            <span>Ships from Canada</span>
-          </div>
+          <p className="text-sm font-medium text-foreground">
+            180-Day Empty Jar Guarantee. Love it or we'll refund every penny.
+          </p>
         </div>
       </div>
     </section>
