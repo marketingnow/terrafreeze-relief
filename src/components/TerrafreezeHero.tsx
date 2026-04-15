@@ -75,7 +75,7 @@ const TerrafreezeHero = () => {
 
           {/* Trust */}
           <p className="text-sm font-medium text-foreground">
-            180-Day Empty Jar Guarantee. Love it or we'll refund every penny.
+            180-Day Guarantee. Love it or we'll refund every penny.
           </p>
         </div>
       </div>
