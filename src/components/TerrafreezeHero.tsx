@@ -64,19 +64,17 @@ const TerrafreezeHero = () => {
           </p>
 
           {/* CTA */}
-          <div className="mb-6">
+          <div className="mb-2 w-full sm:max-w-md">
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 w-full sm:max-w-md px-8 py-4 bg-primary text-primary-foreground font-bold text-[25px] tracking-wide rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
+              className="inline-flex items-center justify-center gap-2 w-full px-8 py-4 bg-primary text-primary-foreground font-bold text-[25px] tracking-wide rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
             >
               TRY TERRAFREEZE TODAY →
             </a>
+            <p className="text-sm font-medium text-foreground text-center mt-3">
+              180-Day Guarantee. Love it or we'll refund every penny.
+            </p>
           </div>
-
-          {/* Trust */}
-          <p className="text-sm font-medium text-foreground text-center -mt-2">
-            180-Day Guarantee. Love it or we'll refund every penny.
-          </p>
         </div>
       </div>
     </section>
