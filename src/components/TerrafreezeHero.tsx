@@ -67,7 +67,7 @@ const TerrafreezeHero = () => {
           <div className="mb-6">
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 w-full sm:max-w-md px-8 py-4 bg-primary text-primary-foreground font-bold text-lg tracking-wide rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
+              className="inline-flex items-center justify-center gap-2 w-full sm:max-w-md px-8 py-4 bg-primary text-primary-foreground font-bold text-[25px] tracking-wide rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
             >
               TRY TERRAFREEZE TODAY →
             </a>
