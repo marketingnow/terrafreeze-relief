@@ -1,7 +1,4 @@
 import heroBgFull from "@/assets/hero-bg-full.jpg";
-import avatar1 from "@/assets/avatar-1.jpg";
-import avatar2 from "@/assets/avatar-2.jpg";
-import avatar3 from "@/assets/avatar-3.jpg";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -30,24 +27,10 @@ const TerrafreezeHero = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
         <div className="max-w-xl">
           {/* Social proof */}
-          <div className="flex items-center gap-3 mb-6">
-            <div className="flex -space-x-2.5">
-              {[avatar1, avatar2, avatar3].map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt=""
-                  className="w-9 h-9 rounded-full border-2 border-[hsl(0,0%,100%)] object-cover"
-                  style={{ zIndex: 3 - i }}
-                  width={36}
-                  height={36}
-                />
-              ))}
-            </div>
-            <div className="flex flex-col gap-0.5">
-              <Stars />
-              <span className="text-foreground text-sm font-medium">Loved By 15,000 Canadians</span>
-            </div>
+          <div className="flex items-center gap-2 mb-6">
+            <Stars />
+            <span className="text-sm font-semibold text-foreground">4.9/5</span>
+            <span className="text-sm text-muted-foreground">from 2,400+ verified reviews</span>
           </div>
 
           {/* Headline */}
