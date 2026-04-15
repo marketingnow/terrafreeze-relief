@@ -34,11 +34,11 @@ const TerrafreezeHero = () => {
 
           {/* Headline */}
           <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
-            <span>Finally — a pain cream</span>
+            <span>Finally — A Pain Cream</span>
             <br />
-            <span>{"built for "}</span>
+            <span>{"Built For "}</span>
             <span className="bg-gradient-to-br from-accent to-primary bg-clip-text text-transparent">
-              Canadian life.
+              Canadian Life.
             </span>
           </h1>
 
