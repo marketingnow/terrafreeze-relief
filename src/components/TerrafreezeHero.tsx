@@ -29,7 +29,7 @@ const TerrafreezeHero = () => {
           {/* Social proof */}
           <div className="flex items-center gap-1.5 mb-3">
             <Stars />
-            <span className="text-[18px] font-bold tracking-tight text-[hsl(0,0%,0%)]">4.9/5 — 2,400+ verified reviews</span>
+            <span className="font-['Playfair_Display',serif] text-[18px] font-bold tracking-tight text-[hsl(0,0%,0%)]">4.9/5 — 2,400+ verified reviews</span>
           </div>
 
           {/* Headline */}
