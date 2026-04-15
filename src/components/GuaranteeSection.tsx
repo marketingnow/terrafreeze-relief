@@ -13,7 +13,7 @@ const GuaranteeSection = () => {
         </div>
 
         {/* Headline */}
-        <h2 className="text-center font-['Playfair_Display',serif] text-[clamp(28px,3.5vw,46px)] font-bold leading-[1.1] text-foreground mb-14 md:mb-16">
+        <h2 className="text-center font-['Plus_Jakarta_Sans',sans-serif] text-[clamp(28px,3.5vw,46px)] font-extrabold leading-[1.1] text-foreground mb-14 md:mb-16">
           <span className="italic text-accent">Real Relief</span> — or Your
           Money Back
         </h2>

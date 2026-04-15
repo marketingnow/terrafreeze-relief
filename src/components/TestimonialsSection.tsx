@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
               <span className="text-sm font-semibold text-foreground">4.9/5</span>
               <span className="text-sm text-muted-foreground">from 2,400+ reviews</span>
             </div>
-            <h2 className="font-['Playfair_Display',serif] font-bold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-foreground mb-3">
+            <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-foreground mb-3">
               Don't take our word for it.{" "}
               <br className="hidden sm:block" />
               <span className="italic bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">

@@ -45,7 +45,7 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Headline */}
-        <h2 className="mb-14 max-w-lg font-['Playfair_Display',serif] text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] text-foreground md:mb-16">
+        <h2 className="mb-14 max-w-lg font-['Plus_Jakarta_Sans',sans-serif] text-[clamp(28px,3.5vw,42px)] font-extrabold leading-[1.15] text-foreground md:mb-16">
           The Simple Routine That{" "}
           <span className="italic text-accent">Ends Your Pain</span>
         </h2>
