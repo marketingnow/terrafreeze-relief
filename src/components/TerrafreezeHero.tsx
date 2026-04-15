@@ -43,7 +43,7 @@ const TerrafreezeHero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-foreground text-[18px] leading-snug mb-8 max-w-lg font-medium">
+          <p className="font-['Playfair_Display',serif] text-foreground text-[18px] leading-snug mb-8 max-w-lg font-medium">
             Our 18-ingredient cooling formula delivers fast-acting, targeted comfort — working right at the source for sore joints, tight muscles, and everyday aches.
           </p>
 
@@ -55,7 +55,7 @@ const TerrafreezeHero = () => {
             >
               TRY TERRAFREEZE TODAY →
             </a>
-            <p className="text-sm font-medium text-foreground text-center mt-3">
+            <p className="font-['Playfair_Display',serif] text-sm font-medium text-foreground text-center mt-3">
               180-Day Guarantee. Love it or we'll refund every penny.
             </p>
           </div>
