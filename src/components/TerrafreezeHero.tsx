@@ -27,10 +27,10 @@ const TerrafreezeHero = () => {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
         <div className="max-w-xl">
           {/* Social proof */}
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-1.5 mb-3">
             <Stars />
-            <span className="text-sm font-semibold text-foreground">4.9/5</span>
-            <span className="text-sm text-muted-foreground">from 2,400+ verified reviews</span>
+            <span className="text-[13px] font-bold tracking-tight text-foreground">4.9/5</span>
+            <span className="text-[13px] font-semibold text-foreground/70 tracking-tight">— 2,400+ verified reviews</span>
           </div>
 
           {/* Headline */}
