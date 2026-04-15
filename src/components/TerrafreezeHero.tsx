@@ -87,11 +87,11 @@ const TerrafreezeHero = () => {
         </div>
 
         {/* Right: product jar — separate image for precise sizing */}
-        <div className="hidden md:flex flex-1 justify-center items-end ml-8">
+        <div className="hidden md:flex flex-1 justify-center items-center ml-8">
           <img
             src={productJar}
             alt="Terrafreeze Extra Strength Pain Relief Cream"
-            className="w-[340px] lg:w-[400px] max-h-[480px] object-contain drop-shadow-2xl"
+            className="w-[260px] lg:w-[320px] max-h-[380px] object-contain drop-shadow-2xl"
           />
         </div>
       </div>
