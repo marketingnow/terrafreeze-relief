@@ -19,15 +19,10 @@ const Stars = () => (
 
 const TerrafreezeHero = () => {
   return (
-    <section className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center pb-16">
-      {/* Full-bleed background with product baked in */}
-      <img
-        src={heroBgFull}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover object-right"
-        width={1920}
-        height={1080}
-      />
+    <section
+      className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center bg-cover bg-right bg-no-repeat"
+      style={{ backgroundImage: `url(${heroBgFull})` }}
+    >
 
       {/* Content — left side only, product is in the background image */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
