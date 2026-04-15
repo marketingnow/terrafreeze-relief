@@ -74,7 +74,7 @@ const TerrafreezeHero = () => {
           </div>
 
           {/* Trust */}
-          <p className="text-sm font-medium text-foreground">
+          <p className="text-sm font-medium text-foreground text-center -mt-2">
             180-Day Guarantee. Love it or we'll refund every penny.
           </p>
         </div>
