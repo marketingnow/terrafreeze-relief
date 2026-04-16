@@ -1,7 +1,7 @@
 import { ShieldCheck, Leaf, Beaker, Award, Truck, MapPin } from "lucide-react";
 import mentholImg from "@/assets/ingredient-menthol.jpg";
 import arnicaImg from "@/assets/ingredient-arnica.jpg";
-import msmImg from "@/assets/ingredient-msm.jpg";
+import aloeVeraImg from "@/assets/ingredient-aloe-vera.jpg";
 import emuOilImg from "@/assets/ingredient-emu-oil.jpg";
 
 const ingredients = [
@@ -19,7 +19,7 @@ const ingredients = [
   },
   {
     name: "Aloe Vera",
-    img: msmImg,
+    img: aloeVeraImg,
     desc: "Soothes and hydrates skin while enhancing absorption of active ingredients for deeper, longer-lasting relief.",
     dosage: null,
   },
