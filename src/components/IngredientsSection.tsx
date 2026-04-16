@@ -9,25 +9,25 @@ const ingredients = [
     name: "Menthol",
     img: mentholImg,
     desc: "Delivers an instant cooling sensation that calms inflamed tissue and eases muscle tension on contact.",
-    dosage: "5%",
+    dosage: "10%",
   },
   {
     name: "Arnica Montana",
     img: arnicaImg,
     desc: "A time-tested botanical used by Canadian athletes and physiotherapists to reduce bruising and swelling naturally.",
-    dosage: "4%",
+    dosage: null,
   },
   {
-    name: "MSM",
+    name: "Aloe Vera",
     img: msmImg,
-    desc: "Supports joint flexibility and helps reduce oxidative stress in connective tissue — essential for active Canadians.",
-    dosage: "2%",
+    desc: "Soothes and hydrates skin while enhancing absorption of active ingredients for deeper, longer-lasting relief.",
+    dosage: null,
   },
   {
     name: "Emu Oil",
     img: emuOilImg,
     desc: "Deep-penetrating carrier that drives active ingredients beneath the skin — right where pain lives.",
-    dosage: "3%",
+    dosage: null,
   },
 ];
 
