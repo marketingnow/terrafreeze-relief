@@ -95,12 +95,13 @@ const IngredientsSection = () => {
                     {item.desc}
                   </p>
                 </div>
-                {/* Dosage badge */}
-                <div className="self-start">
-                  <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 bg-white/15 backdrop-blur-sm text-white text-sm font-bold tracking-wide">
-                    {item.dosage}
-                  </span>
-                </div>
+                {item.dosage && (
+                  <div className="self-start">
+                    <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 bg-white/15 backdrop-blur-sm text-white text-sm font-bold tracking-wide">
+                      {item.dosage}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
