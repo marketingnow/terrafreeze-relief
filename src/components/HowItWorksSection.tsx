@@ -53,7 +53,7 @@ const HowItWorksSection = () => {
         {/* Two-column: steps left, product right */}
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
           {/* Left — Steps */}
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {steps.map((step) => (
               <div
                 key={step.num}
