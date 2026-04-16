@@ -60,7 +60,9 @@ const IngredientsSection = () => {
             <span className="italic text-foreground">every jar.</span>
           </h2>
           <p className="text-foreground text-xl max-w-xl mx-auto leading-relaxed">
-            4 clinically studied ingredients. Zero fillers. Trusted by 15,000+ Canadians coast to coast.
+            18 Ingredients in 1 Powerful Formula
+            <br />
+            Clinically Reviewed + Zero Fillers
           </p>
         </div>
 
