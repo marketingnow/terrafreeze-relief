@@ -88,7 +88,7 @@ const IngredientsSection = () => {
 
         {/* Ingredient cards — photo-backed like reference */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
-          {[...ingredients, ...ingredients].map((item, idx) => (
+          {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
               className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-default"
