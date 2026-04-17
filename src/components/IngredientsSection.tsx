@@ -10,10 +10,10 @@ import msmImg from "@/assets/ingredient-msm.jpg";
 
 const ingredients = [
   {
-    name: "Menthol",
+    name: "Menthol 10%",
     img: mentholImg,
     desc: "Delivers an instant cooling sensation that calms inflamed tissue and eases muscle tension on contact.",
-    dosage: "10%",
+    dosage: null,
   },
   {
     name: "Arnica Montana",
@@ -91,7 +91,7 @@ const IngredientsSection = () => {
           {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
-              className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-default"
+              className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-default"
             >
               {/* Background image */}
               <img
