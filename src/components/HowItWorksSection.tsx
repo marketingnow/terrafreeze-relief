@@ -51,7 +51,7 @@ const HowItWorksSection = () => {
                   loading="lazy"
                   width={1280}
                   height={960}
-                  className="aspect-[4/3] w-full object-cover"
+                  className="aspect-[4/3] w-full object-contain"
                 />
                 <span className="absolute bottom-3 left-3 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground shadow-md">
                   Step {step.num}
