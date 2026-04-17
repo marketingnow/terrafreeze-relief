@@ -15,10 +15,10 @@ const PainCrisisSection = () => {
           {/* Left — copy */}
           <div className="space-y-6 flex flex-col justify-center">
             <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
-              You rub it on, feel the cool tingle, and for about twenty minutes you think maybe this one's different. Then it fades. The ache creeps back, and you're reaching for the tube again — or toughing it out. Most drugstore creams mask the surface and leave everything underneath exactly where it was.
+              You rub it on, feel the cool tingle, and for twenty minutes think maybe this one's different. Then it fades. The ache creeps back, and you're reaching for the tube again. Most drugstore creams mask the surface and leave everything underneath where it was.
             </p>
             <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
-              It wears you down. You start rationing relief, planning your day around flare-ups, waking at 3 a.m. because the stiffness won't let you settle. Nothing actually changes.
+              It wears you down. You ration relief, plan your day around flare-ups, wake at 3 a.m. because the stiffness won't settle.
             </p>
             <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
               <span className="font-bold text-accent">TERRAFREEZE was built for that.</span>{" "}
@@ -27,11 +27,11 @@ const PainCrisisSection = () => {
           </div>
 
           {/* Right — chart image */}
-          <div className="h-full">
+          <div className="h-full flex items-center">
             <img
               src={comparisonChart}
               alt="Comparison chart showing TERRAFREEZE achieves 59.5% pain reduction vs only 32.3% for generic pharmacy cream"
-              className="w-full h-full object-cover rounded-2xl shadow-2xl"
+              className="w-full h-auto max-h-full object-contain rounded-2xl shadow-2xl"
             />
           </div>
         </div>
