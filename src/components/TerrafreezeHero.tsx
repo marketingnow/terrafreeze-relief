@@ -6,58 +6,94 @@ const StarIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const Stars = () => (
+const Stars = ({ size = "w-5 h-5" }: { size?: string }) => (
   <div className="flex gap-0.5">
     {[...Array(5)].map((_, i) => (
-      <StarIcon key={i} className="w-5 h-5 text-[hsl(43,76%,46%)]" />
+      <StarIcon key={i} className={`${size} text-[hsl(43,76%,46%)]`} />
     ))}
   </div>
 );
 
 const TerrafreezeHero = () => {
   return (
-    <section
-      className="relative w-full min-h-[580px] lg:min-h-[620px] flex items-center bg-no-repeat"
-      style={{ backgroundImage: `url(${heroBgFull})`, backgroundPosition: "right bottom", backgroundSize: "85% auto" }}
-    >
-      {/* Left gradient overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200,20%,90%)]/95 via-background/40 via-40% to-transparent pointer-events-none" />
-
-      {/* Content — left side only, product is in the background image */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
-        <div className="max-w-xl">
-          {/* Social proof */}
+    <section className="relative w-full">
+      {/* MOBILE LAYOUT (<md): stacked image + content */}
+      <div className="md:hidden flex flex-col bg-[hsl(200,20%,94%)]">
+        <div
+          className="w-full aspect-[4/3] bg-no-repeat bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBgFull})` }}
+          role="img"
+          aria-label="TERRAFREEZE pain cream product"
+        />
+        <div className="px-5 pt-7 pb-10">
           <div className="flex items-center gap-1.5 mb-3">
-            <Stars />
-            <span className="font-['Plus_Jakarta_Sans',sans-serif] text-[14px] font-thin tracking-tight text-[hsl(0,0%,0%)]">4.9/5 — 2,400+ verified reviews</span>
+            <Stars size="w-4 h-4" />
+            <span className="font-['Plus_Jakarta_Sans',sans-serif] text-[13px] font-medium tracking-tight text-foreground">
+              4.9/5 — 2,400+ verified reviews
+            </span>
           </div>
 
-          {/* Headline */}
-          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
-            <span>Finally — A Pain Cream</span>
-            <br />
-            <span>{"Built For "}</span>
+          <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[34px] leading-[1.08] text-foreground mb-4 tracking-tight">
+            <span>Finally — A Pain Cream Built For </span>
             <span className="bg-gradient-to-br from-accent to-primary bg-clip-text text-transparent">
               Canadian Life.
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] text-foreground text-[18px] leading-snug mb-8 max-w-lg font-medium">
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] text-foreground text-[17px] leading-snug mb-6 font-medium">
             Our 18-ingredient cooling formula delivers fast-acting, targeted comfort — working right at the source for sore joints, tight muscles, and everyday aches.
           </p>
 
-          {/* CTA */}
-          <div className="mb-2 w-full sm:max-w-md">
-            <a
-              href="#"
-              className="font-['Plus_Jakarta_Sans',sans-serif] inline-flex items-center justify-center gap-2 w-full px-8 py-4 bg-primary text-primary-foreground font-extrabold text-[25px] tracking-wide rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
-            >
-              TRY TERRAFREEZE TODAY →
-            </a>
-            <p className="font-['Plus_Jakarta_Sans',sans-serif] text-sm font-medium text-foreground text-center mt-3">
-              180-Day Guarantee. Love it or we'll refund every penny.
+          <a
+            href="#"
+            className="font-['Plus_Jakarta_Sans',sans-serif] inline-flex items-center justify-center gap-2 w-full px-6 py-4 bg-primary text-primary-foreground font-extrabold text-[19px] tracking-wide rounded-md hover:brightness-110 transition-all active:scale-[0.97]"
+          >
+            TRY TERRAFREEZE TODAY →
+          </a>
+          <p className="font-['Plus_Jakarta_Sans',sans-serif] text-[13px] font-medium text-foreground text-center mt-3">
+            180-Day Guarantee. Love it or we'll refund every penny.
+          </p>
+        </div>
+      </div>
+
+      {/* DESKTOP / TABLET LAYOUT (md+): original overlay design */}
+      <div
+        className="hidden md:flex relative w-full min-h-[580px] lg:min-h-[620px] items-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBgFull})`, backgroundPosition: "right bottom", backgroundSize: "85% auto" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(200,20%,90%)]/95 via-background/40 via-40% to-transparent pointer-events-none" />
+
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-1.5 mb-3">
+              <Stars />
+              <span className="font-['Plus_Jakarta_Sans',sans-serif] text-[14px] font-thin tracking-tight text-[hsl(0,0%,0%)]">4.9/5 — 2,400+ verified reviews</span>
+            </div>
+
+            <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[clamp(30px,4vw,54px)] leading-[1.08] text-foreground mb-5 tracking-tight">
+              <span>Finally — A Pain Cream</span>
+              <br />
+              <span>{"Built For "}</span>
+              <span className="bg-gradient-to-br from-accent to-primary bg-clip-text text-transparent">
+                Canadian Life.
+              </span>
+            </h1>
+
+            <p className="font-['Plus_Jakarta_Sans',sans-serif] text-foreground text-[18px] leading-snug mb-8 max-w-lg font-medium">
+              Our 18-ingredient cooling formula delivers fast-acting, targeted comfort — working right at the source for sore joints, tight muscles, and everyday aches.
             </p>
+
+            <div className="mb-2 w-full sm:max-w-md">
+              <a
+                href="#"
+                className="font-['Plus_Jakarta_Sans',sans-serif] inline-flex items-center justify-center gap-2 w-full px-8 py-4 bg-primary text-primary-foreground font-extrabold text-[25px] tracking-wide rounded-md hover:brightness-110 transition-all hover:-translate-y-0.5 active:scale-[0.97]"
+              >
+                TRY TERRAFREEZE TODAY →
+              </a>
+              <p className="font-['Plus_Jakarta_Sans',sans-serif] text-sm font-medium text-foreground text-center mt-3">
+                180-Day Guarantee. Love it or we'll refund every penny.
+              </p>
+            </div>
           </div>
         </div>
       </div>
