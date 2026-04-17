@@ -23,8 +23,8 @@ const TerrafreezeHero = () => {
         className="md:hidden relative w-full min-h-[100svh] flex flex-col overflow-hidden"
         style={{
           backgroundImage: `url(${heroBgMobile})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
+          backgroundSize: "115% auto",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
           backgroundColor: "hsl(200,30%,94%)",
         }}
