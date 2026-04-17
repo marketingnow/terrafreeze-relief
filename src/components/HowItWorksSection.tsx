@@ -1,5 +1,5 @@
 import terrafreezeJar from "@/assets/terrafreeze-jar.webp";
-import stepApply from "@/assets/step-apply-v3.png";
+import stepApply from "@/assets/step-apply-v4.png";
 import stepPenetrate from "@/assets/step-penetrate-v3.png";
 import stepRelief from "@/assets/step-relief-v3.png";
 
@@ -51,7 +51,7 @@ const HowItWorksSection = () => {
                   loading="lazy"
                   width={1280}
                   height={960}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                 />
                 <span className="absolute bottom-3 left-3 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground shadow-md">
                   Step {step.num}
