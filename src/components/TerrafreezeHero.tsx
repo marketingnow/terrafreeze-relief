@@ -1,4 +1,5 @@
 import heroBgFull from "@/assets/hero-bg-full.jpg";
+import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
