@@ -14,13 +14,13 @@ const PainCrisisSection = () => {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           {/* Left — copy */}
           <div className="space-y-6 flex flex-col justify-center">
-            <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
+            <p className="text-foreground/80 text-[24px] leading-[31px]">
               You rub it on, feel the cool tingle, and for twenty minutes think maybe this one's different. Then it fades. The ache creeps back, and you're reaching for the tube again. Most drugstore creams mask the surface and leave everything underneath where it was.
             </p>
-            <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
+            <p className="text-foreground/80 text-[24px] leading-[31px]">
               It wears you down. You ration relief, plan your day around flare-ups, wake at 3 a.m. because the stiffness won't settle.
             </p>
-            <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
+            <p className="text-foreground/80 text-[24px] leading-[31px]">
               <span className="font-bold text-accent">TERRAFREEZE was built for that.</span>{" "}
               An 18-ingredient formula — cooling Menthol for fast, targeted relief, with Arnica, MSM, and Emu Oil to soothe and support recovery underneath. Quick relief that lasts for hours, not minutes. Over 15,000 Canadians have already made the switch.
             </p>
