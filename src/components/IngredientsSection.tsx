@@ -108,10 +108,10 @@ const IngredientsSection = () => {
               {/* Content */}
               <div className="relative z-10 h-full flex flex-col justify-between p-5 lg:p-6">
                 <div>
-                  <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-2xl lg:text-3xl text-white leading-tight mb-2">
+                  <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[35px] text-white leading-tight mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-white text-base lg:text-lg leading-relaxed max-w-[90%]">
+                  <p className="text-white text-[16px] leading-[22px] max-w-[90%]">
                     {item.desc}
                   </p>
                 </div>
