@@ -1,7 +1,7 @@
 import terrafreezeJar from "@/assets/terrafreeze-jar.webp";
-import stepApply from "@/assets/step-apply.jpg";
-import stepPenetrate from "@/assets/step-penetrate.jpg";
-import stepRelief from "@/assets/step-relief.jpg";
+import stepApply from "@/assets/step-apply-v2.png";
+import stepPenetrate from "@/assets/step-penetrate-v2.png";
+import stepRelief from "@/assets/step-relief-v2.png";
 
 const steps = [
   {
