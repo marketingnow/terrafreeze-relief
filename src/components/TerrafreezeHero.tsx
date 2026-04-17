@@ -1,4 +1,5 @@
 import heroBgFull from "@/assets/hero-bg-full.jpg";
+import heroBgMobile from "@/assets/hero-bg-mobile.jpg";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -17,20 +18,21 @@ const Stars = ({ size = "w-5 h-5" }: { size?: string }) => (
 const TerrafreezeHero = () => {
   return (
     <section className="relative w-full">
-      {/* MOBILE LAYOUT (<md): full-bleed background, content overlaid, fits viewport */}
+      {/* MOBILE LAYOUT (<md): portrait product image as full-bleed background */}
       <div
-        className="md:hidden relative w-full min-h-[100svh] flex flex-col bg-no-repeat overflow-hidden"
+        className="md:hidden relative w-full min-h-[100svh] flex flex-col overflow-hidden"
         style={{
-          backgroundImage: `url(${heroBgFull})`,
-          backgroundSize: "150% auto",
-          backgroundPosition: "center 58%",
-          backgroundColor: "hsl(200,22%,91%)",
+          backgroundImage: `url(${heroBgMobile})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "hsl(200,30%,94%)",
         }}
       >
         {/* Top fade for headline legibility */}
-        <div className="absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-[hsl(200,25%,93%)] via-[hsl(200,25%,93%)]/75 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-[38%] bg-gradient-to-b from-[hsl(200,30%,94%)] via-[hsl(200,30%,94%)]/85 to-transparent pointer-events-none" />
         {/* Bottom fade for CTA legibility */}
-        <div className="absolute inset-x-0 bottom-0 h-[42%] bg-gradient-to-t from-[hsl(200,25%,93%)] via-[hsl(200,25%,93%)]/88 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-[38%] bg-gradient-to-t from-[hsl(200,30%,94%)] via-[hsl(200,30%,94%)]/90 to-transparent pointer-events-none" />
 
         {/* Top: stars + headline */}
         <div className="relative z-10 px-5 pt-6 text-center">
@@ -48,8 +50,8 @@ const TerrafreezeHero = () => {
           </h1>
         </div>
 
-        {/* Spacer letting the product (background image) show through */}
-        <div className="flex-1 min-h-[200px]" />
+        {/* Spacer that lets the centered product show */}
+        <div className="flex-1" />
 
         {/* Bottom: subtitle + CTA */}
         <div className="relative z-10 px-5 pb-6 text-center">
