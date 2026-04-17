@@ -11,9 +11,9 @@ const PainCrisisSection = () => {
         </h2>
 
         {/* Two-column: copy left, chart right */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
           {/* Left — copy */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col justify-center">
             <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
               You rub it on, feel the cool tingle, and for about twenty minutes you think maybe this one's different. Then it fades. The ache creeps back, and you're reaching for the tube again — or toughing it out. Most drugstore creams mask the surface and leave everything underneath exactly where it was.
             </p>
@@ -27,11 +27,11 @@ const PainCrisisSection = () => {
           </div>
 
           {/* Right — chart image */}
-          <div>
+          <div className="h-full">
             <img
               src={comparisonChart}
               alt="Comparison chart showing TERRAFREEZE achieves 59.5% pain reduction vs only 32.3% for generic pharmacy cream"
-              className="w-full h-auto rounded-2xl shadow-2xl"
+              className="w-full h-full object-cover rounded-2xl shadow-2xl"
             />
           </div>
         </div>
