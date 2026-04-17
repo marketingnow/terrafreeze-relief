@@ -6,24 +6,21 @@ import stepRelief from "@/assets/step-relief.jpg";
 const steps = [
   {
     num: "1",
-    title: "Apply",
     image: stepApply,
     description:
-      "Massage a small amount onto the sore area. Absorbs quickly with no greasy residue — cooling comfort starts on contact.",
+      "Massage a small amount onto the sore area — cooling comfort starts on contact.",
   },
   {
     num: "2",
-    title: "Penetrate",
     image: stepPenetrate,
     description:
-      "Emu Oil helps carry Menthol, Arnica, and MSM deeper — reaching joints, muscles, and tendons where basic creams can't.",
+      "Emu Oil drives Menthol, Arnica, and MSM deeper — reaching joints and muscles where basic creams can't.",
   },
   {
     num: "3",
-    title: "Relief",
     image: stepRelief,
     description:
-      "Feel cooling relief that lasts for hours. Stay active throughout the day with no pills required. Reapply as needed.",
+      "Feel cooling relief that lasts for hours. Stay active all day — no pills required.",
   },
 ];
 
@@ -37,65 +34,36 @@ const HowItWorksSection = () => {
       }}
     >
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-12">
-        {/* Eyebrow */}
-        <div className="mb-4">
-          <span className="inline-block rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-accent">
-            How to use it
-          </span>
-        </div>
-
-        {/* Headline */}
-        <h2 className="mb-14 max-w-lg font-['Plus_Jakarta_Sans',sans-serif] text-[clamp(28px,3.5vw,42px)] font-extrabold leading-[1.15] text-foreground md:mb-16">
-          The Simple Routine That{" "}
-          <span className="italic text-accent">Ends Your Pain</span>
+        {/* Headline — centered */}
+        <h2 className="mb-12 text-center font-['Plus_Jakarta_Sans',sans-serif] text-[clamp(32px,4vw,50px)] font-extrabold leading-[1.15] text-foreground md:mb-16">
+          3 Simple Daily Steps
         </h2>
 
-        {/* Two-column: steps left, product right */}
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
-          {/* Left — Steps */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {steps.map((step) => (
-              <div
-                key={step.num}
-                className="flex gap-5 rounded-2xl border border-border/60 bg-card/60 p-4 backdrop-blur-sm transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 sm:gap-6 sm:p-5"
-              >
-                {/* Photo */}
-                <div className="relative flex-shrink-0">
-                  <img
-                    src={step.image}
-                    alt={`Step ${step.num}: ${step.title}`}
-                    loading="lazy"
-                    width={640}
-                    height={640}
-                    className="h-28 w-28 rounded-xl object-cover sm:h-36 sm:w-36"
-                  />
-                  {/* Number badge overlay */}
-                  <span className="absolute -left-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground shadow-md">
-                    {step.num}
-                  </span>
-                </div>
-
-                {/* Text content */}
-                <div className="flex flex-col justify-center">
-                  <h3 className="mb-1.5 text-lg font-bold text-foreground sm:text-xl">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground sm:text-[15px]">
-                    {step.description}
-                  </p>
-                </div>
+        {/* Steps grid */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 md:gap-8">
+          {steps.map((step) => (
+            <div key={step.num} className="flex flex-col">
+              {/* Image with Step badge */}
+              <div className="relative overflow-hidden rounded-2xl">
+                <img
+                  src={step.image}
+                  alt={`Step ${step.num}`}
+                  loading="lazy"
+                  width={640}
+                  height={480}
+                  className="aspect-[4/3] w-full object-cover"
+                />
+                <span className="absolute bottom-3 left-3 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground shadow-md">
+                  Step {step.num}
+                </span>
               </div>
-            ))}
-          </div>
 
-          {/* Right — Product image */}
-          <div className="hidden items-center justify-center lg:flex">
-            <img
-              src={terrafreezeJar}
-              alt="TERRAFREEZE Extra Strength Pain Relief Cream jar"
-              className="w-[340px] drop-shadow-2xl"
-            />
-          </div>
+              {/* Description below */}
+              <p className="mt-5 text-[17px] leading-relaxed text-foreground">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
