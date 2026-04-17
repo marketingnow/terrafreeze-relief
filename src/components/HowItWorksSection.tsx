@@ -44,14 +44,14 @@ const HowItWorksSection = () => {
           {steps.map((step) => (
             <div key={step.num} className="flex flex-col">
               {/* Image with Step badge */}
-              <div className="relative overflow-hidden rounded-2xl">
+              <div className="relative overflow-hidden rounded-2xl bg-muted">
                 <img
                   src={step.image}
                   alt={`Step ${step.num}`}
                   loading="lazy"
                   width={640}
                   height={480}
-                  className="aspect-[4/3] w-full object-cover"
+                  className="aspect-[4/3] w-full object-contain"
                 />
                 <span className="absolute bottom-3 left-3 rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground shadow-md">
                   Step {step.num}
