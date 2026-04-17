@@ -34,27 +34,19 @@ const ingredients = [
 const badges = [
   { icon: ShieldCheck, label: "Health Canada NPN Registered" },
   { icon: Leaf, label: "Natural Ingredients" },
-  { icon: Beaker, label: "Clinically Studied" },
-  { icon: Award, label: "Third Party Tested" },
   { icon: Truck, label: "Free Shipping $60+" },
   { icon: MapPin, label: "Made in Canada" },
 ];
 
 const IngredientsSection = () => {
   return (
-    <section className="w-full py-20 lg:py-28 bg-[hsl(200,20%,88%)] relative overflow-hidden">
+    <section className="w-full pt-8 pb-20 lg:pt-10 lg:pb-28 bg-[hsl(200,20%,88%)] relative overflow-hidden">
       {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
+      <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4h-4z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Header */}
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <ShieldCheck className="w-3.5 h-3.5 text-primary" />
-            <span className="text-[11px] font-medium tracking-[0.1em] uppercase text-primary">
-              Health Canada Registered (NPN)
-            </span>
-          </div>
+        <div className="text-center mb-10">
           <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[50px] leading-[1.1] text-foreground mb-5">
             What's inside{" "}
             <span className="italic text-foreground">every jar.</span>
