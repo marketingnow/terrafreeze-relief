@@ -91,7 +91,7 @@ const IngredientsSection = () => {
           {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
-              className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-default"
+              className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-default"
             >
               {/* Background image */}
               <img
