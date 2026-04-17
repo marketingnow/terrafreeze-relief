@@ -111,7 +111,7 @@ const IngredientsSection = () => {
                   <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[35px] text-white leading-tight mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-white text-[16px] leading-[22px] max-w-[90%]">
+                  <p className="text-white font-medium text-[16px] leading-[22px] max-w-[90%]">
                     {item.desc}
                   </p>
                 </div>
