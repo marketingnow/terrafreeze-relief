@@ -10,10 +10,10 @@ import msmImg from "@/assets/ingredient-msm.jpg";
 
 const ingredients = [
   {
-    name: "Menthol",
+    name: "Menthol 10%",
     img: mentholImg,
     desc: "Delivers an instant cooling sensation that calms inflamed tissue and eases muscle tension on contact.",
-    dosage: "10%",
+    dosage: null,
   },
   {
     name: "Arnica Montana",
