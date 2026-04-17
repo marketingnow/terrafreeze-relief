@@ -3,6 +3,10 @@ import mentholImg from "@/assets/ingredient-menthol.jpg";
 import arnicaImg from "@/assets/ingredient-arnica.jpg";
 import aloeVeraImg from "@/assets/ingredient-aloe-vera.jpg";
 import emuOilImg from "@/assets/ingredient-emu-oil.jpg";
+import turmericImg from "@/assets/ingredient-turmeric.jpg";
+import gingerImg from "@/assets/ingredient-ginger.jpg";
+import chamomileImg from "@/assets/ingredient-chamomile.jpg";
+import msmImg from "@/assets/ingredient-msm.jpg";
 
 const ingredients = [
   {
@@ -27,6 +31,30 @@ const ingredients = [
     name: "Emu Oil",
     img: emuOilImg,
     desc: "Deep-penetrating carrier that drives active ingredients beneath the skin — right where pain lives.",
+    dosage: null,
+  },
+  {
+    name: "Turmeric",
+    img: turmericImg,
+    desc: "Rich in curcumin, a powerful natural compound that calms inflammation and supports joint comfort.",
+    dosage: null,
+  },
+  {
+    name: "Ginger",
+    img: gingerImg,
+    desc: "Warming root extract that helps ease stiffness and soothe sore, overworked muscles.",
+    dosage: null,
+  },
+  {
+    name: "Chamomile",
+    img: chamomileImg,
+    desc: "Gentle botanical that calms irritated skin and supports recovery for sensitive areas.",
+    dosage: null,
+  },
+  {
+    name: "MSM",
+    img: msmImg,
+    desc: "Trusted sulfur compound that supports joint mobility, flexibility, and faster muscle recovery.",
     dosage: null,
   },
 ];
@@ -60,7 +88,7 @@ const IngredientsSection = () => {
 
         {/* Ingredient cards — photo-backed like reference */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
-          {[...ingredients, ...ingredients].map((item, idx) => (
+          {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
               className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-default"
