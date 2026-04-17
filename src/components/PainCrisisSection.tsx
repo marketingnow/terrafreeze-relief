@@ -6,8 +6,8 @@ const PainCrisisSection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
         {/* Headline */}
         <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[clamp(28px,3.5vw,46px)] leading-[1.1] text-foreground text-center mb-14 lg:mb-16">
-          The Silent Pain Crisis:{" "}
-          <span className="italic text-accent">A Modern Epidemic</span>
+          Here's Why{" "}
+          <span className="italic text-accent">Nothing You've Tried Has Stuck</span>
         </h2>
 
         {/* Two-column: copy left, chart right */}
@@ -15,20 +15,14 @@ const PainCrisisSection = () => {
           {/* Left — copy */}
           <div className="space-y-6">
             <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
-              <span className="font-bold text-accent">Chronic pain rates</span>{" "}
-              have been climbing steadily for decades. Sedentary lifestyles, repetitive strain,
-              screen-heavy routines, and aging joints are wearing down the body faster than ever.
+              You rub it on, you feel the cool tingle, and for about twenty minutes you think maybe this one's different. Then it fades. The ache creeps back in while you're still mid-afternoon, and you're reaching for the tube again — or giving up and toughing it out. That's the pattern with most drugstore creams. They mask the surface for a moment and leave everything underneath exactly where it was.
             </p>
             <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
-              <span className="font-bold text-foreground">The impact?</span>{" "}
-              Persistent aches and stiffness drain your energy, limit your mobility, and steal
-              your focus — making it harder to stay active, productive, and present in everyday life.
+              It wears you down. You start rationing relief, planning your day around flare-ups, waking up at 3 a.m. because the stiffness won't let you settle. After a week of that loop, nothing has actually changed. You're not looking for another quick hit that disappears before you've finished your coffee. You're looking for something that stays with you.
             </p>
             <p className="text-foreground/80 text-base lg:text-lg leading-relaxed">
-              <span className="font-bold text-accent">The good news:</span>{" "}
-              TERRAFREEZE helps you take back control with fast-acting, natural topical pain
-              relief for sore muscles, stiff joints, and everyday aches — so you can move
-              freely and feel like yourself again.
+              <span className="font-bold text-accent">TERRAFREEZE was built for that.</span>{" "}
+              An 18-ingredient formula — cooling Menthol up top for fast, targeted relief, with Arnica, MSM, and Emu Oil working underneath to soothe and support recovery. Quick relief that lasts for hours, not minutes. Non-greasy, low odour, Health Canada registered, made in Canada and backed by a 180-day guarantee. Over 15,000 Canadians have already made the switch.
             </p>
           </div>
 
