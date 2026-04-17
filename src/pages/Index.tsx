@@ -10,8 +10,8 @@ const Index = () => {
   return (
     <main>
       <TerrafreezeHero />
-      <PainCrisisSection />
       <IngredientsSection />
+      <PainCrisisSection />
       <HowItWorksSection />
       <AsSeenInSection />
       <TestimonialsSection />
