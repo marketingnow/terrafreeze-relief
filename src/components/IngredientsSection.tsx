@@ -60,9 +60,9 @@ const IngredientsSection = () => {
 
         {/* Ingredient cards — photo-backed like reference */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
-          {ingredients.map((item) => (
+          {[...ingredients, ...ingredients].map((item, idx) => (
             <div
-              key={item.name}
+              key={`${item.name}-${idx}`}
               className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-default"
             >
               {/* Background image */}
@@ -95,16 +95,6 @@ const IngredientsSection = () => {
                   </div>
                 )}
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Trust badge row */}
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 pt-10 border-t border-foreground/15">
-          {badges.map((b) => (
-            <div key={b.label} className="flex items-center gap-2 text-foreground text-base font-semibold">
-              <b.icon className="w-4 h-4" />
-              <span>{b.label}</span>
             </div>
           ))}
         </div>
