@@ -94,43 +94,35 @@ const IngredientsSection = () => {
           </p>
         </div>
 
-        {/* Ingredient cards — white card layout with corner thumbnail */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+        {/* Ingredient cards — full background image layout */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 auto-rows-fr">
           {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm border border-black/5 p-6 lg:p-7 flex flex-col min-h-[320px]"
+              className="group relative min-h-[340px] lg:min-h-[380px] rounded-2xl overflow-hidden"
             >
-              {/* Category tag */}
-              <span className="self-start inline-flex items-center px-3 py-1.5 rounded-md bg-[hsl(207,73%,32%)] text-white text-[11px] font-bold tracking-[0.08em] uppercase mb-4">
-                {item.tag}
-              </span>
+              <img
+                src={item.img}
+                alt={item.name}
+                loading="lazy"
+                width={640}
+                height={760}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-foreground/85 via-foreground/60 to-foreground/35" />
 
-              {/* Title */}
-              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[26px] text-foreground leading-tight mb-3 pb-3 border-b border-black/10">
-                {item.name}
-              </h3>
-
-              {/* Description */}
-              <p className="text-foreground/80 font-medium text-[16px] leading-[24px] mb-6 max-w-[78%]">
-                {item.desc}
-              </p>
-
-              {/* Bottom row: benefit text + circular thumbnail */}
-              <div className="mt-auto flex items-end justify-between gap-3">
-                <span className="text-[hsl(207,73%,32%)] font-semibold text-[15px] leading-snug max-w-[55%]">
-                  {item.benefit}
+              <div className="relative z-10 h-full flex flex-col justify-start px-5 pt-4 pb-5 lg:px-6 lg:pt-5 lg:pb-6">
+                <span className="self-start inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-[0.08em] uppercase mb-4">
+                  {item.tag}
                 </span>
-                <div className="relative w-24 h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden flex-shrink-0 shadow-md">
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    loading="lazy"
-                    width={224}
-                    height={224}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
+
+                <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[34px] text-background leading-[0.95] mb-3">
+                  {item.name}
+                </h3>
+
+                <p className="text-background font-semibold text-[16px] leading-[21px] max-w-full">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
