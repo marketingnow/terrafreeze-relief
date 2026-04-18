@@ -18,7 +18,7 @@ const ingredients = [
   {
     name: "Arnica Montana",
     img: arnicaImg,
-    desc: "A time-tested botanical used by Canadian athletes and physiotherapists to reduce bruising and swelling naturally.",
+    desc: "A trusted botanical used to calm swelling, bruising, and sore muscles naturally.",
     dosage: null,
   },
   {
