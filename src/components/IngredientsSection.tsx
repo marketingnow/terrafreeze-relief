@@ -85,7 +85,7 @@ const IngredientsSection = () => {
         <div className="text-center mb-10">
           <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[50px] leading-[1.1] text-foreground mb-5">
             The Formula Behind{" "}
-            <span className="text-foreground">the Relief.</span>
+            <span className="text-foreground">The Relief.</span>
           </h2>
           <p className="text-foreground text-[25px] max-w-2xl mx-auto leading-relaxed">
             18 natural ingredients. No fillers, no shortcuts — just targeted comfort that goes deeper than the surface.
