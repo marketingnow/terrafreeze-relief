@@ -18,7 +18,7 @@ const ingredients = [
   {
     name: "Arnica Montana",
     img: arnicaImg,
-    desc: "A trusted botanical used to calm swelling, bruising, and sore muscles naturally.",
+    desc: "A time-tested botanical used by Canadian athletes and physiotherapists to reduce bruising and swelling naturally.",
     dosage: null,
   },
   {
@@ -106,12 +106,12 @@ const IngredientsSection = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/30" />
 
               {/* Content */}
-              <div className="relative z-10 h-full flex flex-col justify-start p-5 lg:p-6">
+              <div className="relative z-10 h-full flex flex-col justify-start pt-3 pb-5 px-5 lg:pt-4 lg:pb-6 lg:px-6">
                 <div>
                   <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[35px] text-white leading-tight mb-2">
                     {item.name}
                   </h3>
-                  <p className="text-white font-medium text-[16px] leading-[22px] max-w-[90%]">
+                  <p className="text-white font-medium text-[16px] leading-[21px] max-w-[90%]">
                     {item.desc}
                   </p>
                 </div>
