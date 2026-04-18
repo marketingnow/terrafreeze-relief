@@ -106,7 +106,7 @@ const IngredientsSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
 
               {/* Content */}
-              <div className="relative z-10 h-full flex flex-col justify-between p-5 lg:p-6">
+              <div className="relative z-10 h-full flex flex-col justify-start p-5 lg:p-6">
                 <div>
                   <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[35px] text-white leading-tight mb-2">
                     {item.name}
