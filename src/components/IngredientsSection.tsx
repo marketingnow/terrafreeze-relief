@@ -99,7 +99,7 @@ const IngredientsSection = () => {
           {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
-              className="group relative min-h-[340px] lg:min-h-[380px] rounded-2xl overflow-hidden"
+              className="group relative min-h-[270px] lg:min-h-[290px] rounded-2xl overflow-hidden"
             >
               <img
                 src={item.img}
