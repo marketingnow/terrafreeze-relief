@@ -109,7 +109,7 @@ const IngredientsSection = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/65 to-foreground/25 lg:bg-gradient-to-b lg:from-foreground/85 lg:via-foreground/60 lg:to-foreground/35" />
 
-              <div className="relative z-10 h-full flex flex-col justify-end lg:justify-start px-4 pb-5 pt-4 lg:px-6 lg:pt-5 lg:pb-6">
+              <div className="relative z-10 h-full flex flex-col justify-center lg:justify-start px-4 py-5 lg:px-6 lg:pt-5 lg:pb-6">
                 <span className="hidden lg:inline-flex self-start items-center px-3 py-1.5 rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-[0.08em] uppercase mb-4">
                   {item.tag}
                 </span>
