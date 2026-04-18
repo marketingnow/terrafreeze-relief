@@ -84,13 +84,11 @@ const IngredientsSection = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[50px] leading-[1.1] text-foreground mb-5">
-            What's inside{" "}
-            <span className="italic text-foreground">every jar.</span>
+            The Formula Behind{" "}
+            <span className="italic text-foreground">the Relief.</span>
           </h2>
-          <p className="text-foreground text-[25px] max-w-xl mx-auto leading-relaxed">
-            18 Ingredients in 1 Powerful Formula
-            <br />
-            Clinically Reviewed + Zero Fillers
+          <p className="text-foreground text-[25px] max-w-2xl mx-auto leading-relaxed">
+            18 natural ingredients. Clinically reviewed. No fillers, no shortcuts — just targeted comfort that goes deeper than the surface.
           </p>
         </div>
 
