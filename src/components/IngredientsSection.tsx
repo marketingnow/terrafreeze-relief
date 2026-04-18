@@ -97,7 +97,7 @@ const IngredientsSection = () => {
           {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
-              className="group relative min-h-[270px] lg:min-h-[290px] rounded-2xl overflow-hidden"
+              className="group relative min-h-[330px] lg:min-h-[290px] rounded-2xl overflow-hidden"
             >
               <img
                 src={item.img}
@@ -107,18 +107,18 @@ const IngredientsSection = () => {
                 height={760}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-foreground/85 via-foreground/60 to-foreground/35" />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/65 to-foreground/25 lg:bg-gradient-to-b lg:from-foreground/85 lg:via-foreground/60 lg:to-foreground/35" />
 
-              <div className="relative z-10 h-full flex flex-col justify-start px-5 pt-4 pb-5 lg:px-6 lg:pt-5 lg:pb-6">
-                <span className="self-start inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-[0.08em] uppercase mb-4">
+              <div className="relative z-10 h-full flex flex-col justify-end lg:justify-start px-4 pb-5 pt-4 lg:px-6 lg:pt-5 lg:pb-6">
+                <span className="hidden lg:inline-flex self-start items-center px-3 py-1.5 rounded-md bg-primary text-primary-foreground text-[11px] font-bold tracking-[0.08em] uppercase mb-4">
                   {item.tag}
                 </span>
 
-                <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[34px] text-background leading-[0.95] mb-3">
+                <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[26px] lg:text-[34px] text-background leading-[1] mb-2 lg:mb-3 text-center lg:text-left">
                   {item.name}
                 </h3>
 
-                <p className="text-background font-semibold text-[16px] leading-[21px] max-w-full">
+                <p className="text-background font-medium lg:font-semibold text-[14px] lg:text-[16px] leading-[19px] lg:leading-[21px] max-w-full text-center lg:text-left">
                   {item.desc}
                 </p>
               </div>
