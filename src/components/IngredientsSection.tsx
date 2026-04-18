@@ -88,7 +88,7 @@ const IngredientsSection = () => {
             <span className="italic text-foreground">the Relief.</span>
           </h2>
           <p className="text-foreground text-[25px] max-w-2xl mx-auto leading-relaxed">
-            18 natural ingredients. Clinically reviewed. No fillers, no shortcuts — just targeted comfort that goes deeper than the surface.
+            18 natural ingredients. No fillers, no shortcuts — just targeted comfort that goes deeper than the surface.
           </p>
         </div>
 
