@@ -11,51 +11,59 @@ import msmImg from "@/assets/ingredient-msm.jpg";
 const ingredients = [
   {
     name: "Menthol 10%",
+    tag: "Cooling Relief",
     img: mentholImg,
     desc: "Delivers an instant cooling sensation that calms inflamed tissue and eases muscle tension on contact.",
-    dosage: null,
+    benefit: "Instant cooling action",
   },
   {
     name: "Arnica Montana",
+    tag: "Bruise & Swelling",
     img: arnicaImg,
     desc: "A time-tested botanical used by Canadian athletes and physiotherapists to reduce bruising and swelling naturally.",
-    dosage: null,
+    benefit: "Trusted by athletes",
   },
   {
     name: "Aloe Vera",
+    tag: "Skin Soothing",
     img: aloeVeraImg,
     desc: "Soothes and hydrates skin while enhancing absorption of active ingredients for deeper, longer-lasting relief.",
-    dosage: null,
+    benefit: "Boosts absorption",
   },
   {
     name: "Emu Oil",
+    tag: "Deep Penetration",
     img: emuOilImg,
     desc: "Deep-penetrating carrier that drives active ingredients beneath the skin — right where pain lives.",
-    dosage: null,
+    benefit: "Reaches deep tissue",
   },
   {
     name: "Turmeric",
+    tag: "Anti-Inflammatory",
     img: turmericImg,
     desc: "Rich in curcumin, a powerful natural compound that calms inflammation and supports joint comfort.",
-    dosage: null,
+    benefit: "Calms inflammation",
   },
   {
     name: "Ginger",
+    tag: "Warming Comfort",
     img: gingerImg,
     desc: "Warming root extract that helps ease stiffness and soothe sore, overworked muscles.",
-    dosage: null,
+    benefit: "Eases stiffness",
   },
   {
     name: "Chamomile",
+    tag: "Gentle Recovery",
     img: chamomileImg,
     desc: "Gentle botanical that calms irritated skin and supports recovery for sensitive areas.",
-    dosage: null,
+    benefit: "Safe for sensitive skin",
   },
   {
     name: "MSM",
+    tag: "Joint Mobility",
     img: msmImg,
     desc: "Trusted sulfur compound that supports joint mobility, flexibility, and faster muscle recovery.",
-    dosage: null,
+    benefit: "Supports recovery",
   },
 ];
 
@@ -86,42 +94,43 @@ const IngredientsSection = () => {
           </p>
         </div>
 
-        {/* Ingredient cards — photo-backed like reference */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+        {/* Ingredient cards — white card layout with corner thumbnail */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
           {ingredients.map((item, idx) => (
             <div
               key={`${item.name}-${idx}`}
-              className="group relative aspect-[4/3.5] lg:aspect-[4/3.3] rounded-2xl overflow-hidden cursor-default"
+              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm border border-black/5 p-6 lg:p-7 flex flex-col min-h-[320px]"
             >
-              {/* Background image */}
-              <img
-                src={item.img}
-                alt={item.name}
-                loading="lazy"
-                width={640}
-                height={512}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/30" />
+              {/* Category tag */}
+              <span className="self-start inline-flex items-center px-3 py-1.5 rounded-md bg-[hsl(207,73%,32%)] text-white text-[11px] font-bold tracking-[0.08em] uppercase mb-4">
+                {item.tag}
+              </span>
 
-              {/* Content */}
-              <div className="relative z-10 h-full flex flex-col justify-start pt-3 pb-5 px-5 lg:pt-4 lg:pb-6 lg:px-6">
-                <div>
-                  <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-[35px] text-white leading-tight mb-2">
-                    {item.name}
-                  </h3>
-                  <p className="text-white font-medium text-[16px] leading-[21px] max-w-[90%]">
-                    {item.desc}
-                  </p>
+              {/* Title */}
+              <h3 className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-[26px] text-foreground leading-tight mb-3 pb-3 border-b border-black/10">
+                {item.name}
+              </h3>
+
+              {/* Description */}
+              <p className="text-foreground/80 font-medium text-[16px] leading-[24px] mb-6 max-w-[78%]">
+                {item.desc}
+              </p>
+
+              {/* Bottom row: benefit text + circular thumbnail */}
+              <div className="mt-auto flex items-end justify-between gap-3">
+                <span className="text-[hsl(207,73%,32%)] font-semibold text-[15px] leading-snug max-w-[55%]">
+                  {item.benefit}
+                </span>
+                <div className="relative w-24 h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden flex-shrink-0 shadow-md">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    loading="lazy"
+                    width={224}
+                    height={224}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                 </div>
-                {item.dosage && (
-                  <div className="self-start">
-                    <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/30 bg-white/15 backdrop-blur-sm text-white text-sm font-bold tracking-wide">
-                      {item.dosage}
-                    </span>
-                  </div>
-                )}
               </div>
             </div>
           ))}
