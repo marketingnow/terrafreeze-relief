@@ -131,7 +131,7 @@ const TerrafreezeProductSection = () => {
             </p>
 
             <h2 className="tf-product__title text-[28px] md:text-[34px] lg:text-[38px] font-extrabold leading-[1.1] tracking-tight text-[hsl(207,76%,24%)] mb-4">
-              TERRAFREEZE Extra Strength Pain Relief Cream
+              TERRAFREEZE Relief Cream
             </h2>
 
             <div className="tf-product__price-row flex items-baseline gap-3 mb-5">
