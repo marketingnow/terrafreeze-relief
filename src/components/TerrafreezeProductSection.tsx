@@ -142,8 +142,8 @@ const TerrafreezeProductSection = () => {
             </h2>
 
             <div className="tf-product__price-row flex items-baseline gap-3 mb-5">
-              <span className="text-[28px] md:text-[32px] font-extrabold text-foreground">$59.99</span>
-              <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$79.99</span>
+              <span className="text-[28px] md:text-[32px] font-extrabold text-foreground">$24.95</span>
+              <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$69.00</span>
             </div>
 
             <blockquote className="tf-product__quote border-l-4 border-[hsl(202,72%,35%)] pl-4 py-1 mb-6">
