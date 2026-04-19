@@ -31,6 +31,7 @@ type Pkg = {
   priceLabel: string;
   perJar: string;
   savings?: string;
+  checkoutUrl: string;
 };
 
 const PACKAGES: Pkg[] = [
@@ -41,6 +42,7 @@ const PACKAGES: Pkg[] = [
     price: 59.99,
     priceLabel: "$59.99",
     perJar: "$59.99/jar",
+    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=677",
   },
   {
     id: "popular",
@@ -51,6 +53,7 @@ const PACKAGES: Pkg[] = [
     priceLabel: "$149.99",
     perJar: "$49.99/jar",
     savings: "Save $29.98",
+    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=7361",
   },
   {
     id: "best",
@@ -61,6 +64,7 @@ const PACKAGES: Pkg[] = [
     priceLabel: "$269.99",
     perJar: "$44.99/jar",
     savings: "Save $89.95",
+    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=7575",
   },
 ];
 
@@ -213,12 +217,12 @@ const TerrafreezeProductSection = () => {
               <span className="text-[13px] font-medium text-foreground">4.9/5 — 2,400+ verified reviews</span>
             </div>
 
-            <button
-              type="button"
-              className="tf-product__cta w-full px-6 py-4 bg-[hsl(207,76%,24%)] text-white font-extrabold text-[18px] md:text-[22px] tracking-wide rounded-md hover:brightness-110 transition-all active:scale-[0.98]"
+            <a
+              href={current.checkoutUrl}
+              className="tf-product__cta block text-center w-full px-6 py-4 bg-[hsl(207,76%,24%)] text-white font-extrabold text-[18px] md:text-[22px] tracking-wide rounded-md hover:brightness-110 transition-all active:scale-[0.98]"
             >
               ADD TO CART • {current.priceLabel}
-            </button>
+            </a>
 
             <div className="tf-product__value-props flex flex-col sm:flex-row gap-2 sm:gap-6 mt-3 mb-6">
               <span className="flex items-center gap-2 text-[13px] text-foreground">
