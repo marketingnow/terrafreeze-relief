@@ -41,32 +41,33 @@ const PACKAGES: Pkg[] = [
     id: "starter",
     tier: "Starter",
     qty: "1 Jar",
-    price: 59.99,
-    priceLabel: "$59.99",
-    perJar: "$59.99/jar",
-    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=677",
+    price: 24.95,
+    priceLabel: "$24.95",
+    perJar: "Reg. $69.00",
+    savings: "Save $44.05",
+    checkoutUrl: "https://terrafreeze.ca/?add-to-cart=677",
   },
   {
     id: "popular",
     badge: "MOST POPULAR",
     tier: "Most Popular",
     qty: "3 Jars",
-    price: 149.99,
-    priceLabel: "$149.99",
-    perJar: "$49.99/jar",
-    savings: "Save $29.98",
-    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=7361",
+    price: 49.00,
+    priceLabel: "$49.00",
+    perJar: "Reg. $119.00",
+    savings: "Save $70.00",
+    checkoutUrl: "https://terrafreeze.ca/?add-to-cart=7361",
   },
   {
     id: "best",
     badge: "BEST VALUE",
     tier: "Best Value",
     qty: "6 Jars",
-    price: 269.99,
-    priceLabel: "$269.99",
-    perJar: "$44.99/jar",
-    savings: "Save $89.95",
-    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=7575",
+    price: 89.00,
+    priceLabel: "$89.00",
+    perJar: "Reg. $149.00",
+    savings: "Save $60.00",
+    checkoutUrl: "https://terrafreeze.ca/?add-to-cart=7575",
   },
 ];
 
@@ -141,8 +142,8 @@ const TerrafreezeProductSection = () => {
             </h2>
 
             <div className="tf-product__price-row flex items-baseline gap-3 mb-5">
-              <span className="text-[28px] md:text-[32px] font-extrabold text-foreground">$59.99</span>
-              <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$79.99</span>
+              <span className="text-[28px] md:text-[32px] font-extrabold text-foreground">$24.95</span>
+              <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$69.00</span>
             </div>
 
             <blockquote className="tf-product__quote border-l-4 border-[hsl(202,72%,35%)] pl-4 py-1 mb-6">
