@@ -31,6 +31,7 @@ type Pkg = {
   priceLabel: string;
   perJar: string;
   savings?: string;
+  checkoutUrl: string;
 };
 
 const PACKAGES: Pkg[] = [
