@@ -5,6 +5,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import AsSeenInSection from "@/components/AsSeenInSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
+import TerrafreezeProductSection from "@/components/TerrafreezeProductSection";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <AsSeenInSection />
       <TestimonialsSection />
       <GuaranteeSection />
+      <TerrafreezeProductSection />
     </main>
   );
 };
