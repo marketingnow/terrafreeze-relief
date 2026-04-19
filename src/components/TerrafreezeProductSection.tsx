@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import whatsInsideImg from "@/assets/terrafreeze-whats-inside.jpg";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -13,9 +14,9 @@ const StarIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const MAIN_IMAGE = "https://terrafreeze.ca/wp-content/uploads/terrafreeze-jar-main.png";
+const MAIN_IMAGE = whatsInsideImg;
 const THUMBS = [
-  "https://terrafreeze.ca/wp-content/uploads/terrafreeze-jar-main.png",
+  whatsInsideImg,
   "https://terrafreeze.ca/wp-content/uploads/terrafreeze-jar-side.png",
   "https://terrafreeze.ca/wp-content/uploads/terrafreeze-ingredients-flat.png",
   "https://terrafreeze.ca/wp-content/uploads/terrafreeze-application.png",
