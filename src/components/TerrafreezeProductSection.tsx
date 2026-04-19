@@ -41,10 +41,10 @@ const PACKAGES: Pkg[] = [
     id: "starter",
     tier: "Starter",
     qty: "1 Jar",
-    price: 24.95,
-    priceLabel: "$24.95",
+    price: 29.95,
+    priceLabel: "$29.95",
     perJar: "Reg. $69.00",
-    savings: "Save $44.05",
+    savings: "Save $39.05",
     checkoutUrl: "https://terrafreeze.ca/?add-to-cart=677",
   },
   {
@@ -142,7 +142,7 @@ const TerrafreezeProductSection = () => {
             </h2>
 
             <div className="tf-product__price-row flex items-baseline gap-3 mb-5">
-              <span className="text-[28px] md:text-[32px] font-extrabold text-foreground">$24.95</span>
+              <span className="text-[28px] md:text-[32px] font-extrabold text-foreground">$29.95</span>
               <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$69.00</span>
             </div>
 
@@ -196,7 +196,7 @@ const TerrafreezeProductSection = () => {
                       <div className="flex-1 min-w-0">
                         <p className="text-[13px] font-bold text-foreground">{pkg.qty}</p>
                         <p className="text-[16px] font-extrabold text-[hsl(207,76%,24%)] mt-0.5">{pkg.priceLabel}</p>
-                        <p className="text-[11px] text-[hsl(200,10%,45%)]">{pkg.perJar}</p>
+                        <p className="text-[11px] text-[hsl(200,10%,45%)] line-through">{pkg.perJar}</p>
                         {pkg.savings && (
                           <p className="text-[11px] font-semibold text-[hsl(142,55%,35%)] mt-1">{pkg.savings}</p>
                         )}
