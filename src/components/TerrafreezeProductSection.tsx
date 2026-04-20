@@ -172,7 +172,7 @@ const TerrafreezeProductSection = () => {
               Choose Your Package
             </p>
 
-            <div className="tf-product__packages grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+            <div className="tf-product__packages grid grid-cols-3 gap-2 sm:gap-3 mb-3">
               {PACKAGES.map((pkg) => {
                 const isActive = selectedPkg === pkg.id;
                 const isMiddle = pkg.id === "popular";
@@ -181,7 +181,7 @@ const TerrafreezeProductSection = () => {
                     key={pkg.id}
                     type="button"
                     onClick={() => setSelectedPkg(pkg.id)}
-                    className={`tf-product__package relative text-left rounded-xl border-2 p-3 pt-5 bg-white transition-colors ${
+                    className={`tf-product__package relative text-left rounded-xl border-2 p-2 sm:p-3 pt-4 sm:pt-5 bg-white transition-colors ${
                       isActive
                         ? "border-[hsl(207,76%,24%)] shadow-md"
                         : isMiddle
@@ -191,7 +191,7 @@ const TerrafreezeProductSection = () => {
                   >
                     {pkg.badge && (
                       <span
-                        className={`tf-product__badge absolute -top-2.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-wider whitespace-nowrap ${
+                        className={`tf-product__badge absolute -top-2.5 left-1/2 -translate-x-1/2 px-2 sm:px-2.5 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold tracking-wider whitespace-nowrap ${
                           pkg.id === "popular"
                             ? "bg-[hsl(207,76%,24%)] text-white"
                             : "bg-[hsl(43,76%,46%)] text-white"
@@ -201,31 +201,31 @@ const TerrafreezeProductSection = () => {
                       </span>
                     )}
                     <div className="flex flex-col items-center text-center">
-                      <div className="h-24 w-full flex items-end justify-center mb-2">
+                      <div className="h-16 sm:h-24 w-full flex items-end justify-center mb-2">
                         {pkg.jars === 1 && (
-                          <img src={jarImg} alt="1 jar" className="h-24 w-auto object-contain" />
+                          <img src={jarImg} alt="1 jar" className="h-16 sm:h-24 w-auto object-contain" />
                         )}
                         {pkg.jars === 3 && (
-                          <img src={threePackImg} alt="3 jars" className="h-24 w-auto object-contain" />
+                          <img src={threePackImg} alt="3 jars" className="h-16 sm:h-24 w-auto object-contain" />
                         )}
                         {pkg.jars === 6 && (
-                          <img src={sixPackImg} alt="6 jars" className="h-24 w-auto object-contain" />
+                          <img src={sixPackImg} alt="6 jars" className="h-16 sm:h-24 w-auto object-contain" />
                         )}
                       </div>
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-center gap-1.5 sm:gap-2 mb-1">
                         <span
-                          className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
+                          className={`w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
                             isActive ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]" : "border-[hsl(200,20%,70%)]"
                           }`}
                         >
-                          {isActive && <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />}
+                          {isActive && <Check className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-white" strokeWidth={4} />}
                         </span>
-                        <p className="text-[13px] font-bold text-foreground">{pkg.qty}</p>
+                        <p className="text-[11px] sm:text-[13px] font-bold text-foreground">{pkg.qty}</p>
                       </div>
-                      <p className="text-[16px] font-extrabold text-[hsl(207,76%,24%)]">{pkg.priceLabel}</p>
-                      <p className="text-[11px] text-[hsl(200,10%,45%)] line-through">{pkg.perJar}</p>
+                      <p className="text-[14px] sm:text-[16px] font-extrabold text-[hsl(207,76%,24%)]">{pkg.priceLabel}</p>
+                      <p className="text-[10px] sm:text-[11px] text-[hsl(200,10%,45%)] line-through">{pkg.perJar}</p>
                       {pkg.savings && (
-                        <p className="text-[11px] font-semibold text-[hsl(142,55%,35%)] mt-1">{pkg.savings}</p>
+                        <p className="text-[10px] sm:text-[11px] font-semibold text-[hsl(142,55%,35%)] mt-1">{pkg.savings}</p>
                       )}
                     </div>
                   </button>
