@@ -126,89 +126,13 @@ const TerrafreezeMobileOffer = () => {
           })}
         </div>
 
-        {/* Purchase type */}
-        <p className="text-[15px] font-semibold text-foreground mb-3">
-          Select your purchase type:
-        </p>
-
-        {/* One Time */}
-        <button
-          type="button"
-          onClick={() => setPurchaseType("onetime")}
-          className={`w-full rounded-xl border-2 p-4 mb-3 text-left transition-all ${
-            purchaseType === "onetime"
-              ? "border-[hsl(207,76%,24%)] bg-[hsl(200,30%,96%)]"
-              : "border-[hsl(200,20%,88%)] bg-white"
-          }`}
-        >
-          <div className="flex items-center gap-3">
-            <span
-              className={`w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                purchaseType === "onetime"
-                  ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]"
-                  : "border-[hsl(200,20%,70%)]"
-              }`}
-            >
-              {purchaseType === "onetime" && (
-                <span className="w-2 h-2 rounded-full bg-white" />
-              )}
-            </span>
-            <span className="text-[16px] font-semibold text-foreground">One Time</span>
-            <span className="ml-auto text-[16px] font-bold text-foreground">
-              {current.priceLabel}
-            </span>
-          </div>
-        </button>
-
-        {/* Subscribe & Save */}
-        <button
-          type="button"
-          onClick={() => setPurchaseType("subscribe")}
-          className={`w-full rounded-xl border-2 p-4 mb-5 text-left transition-all ${
-            purchaseType === "subscribe"
-              ? "border-[hsl(207,76%,24%)] bg-[hsl(200,30%,96%)]"
-              : "border-[hsl(200,20%,88%)] bg-white"
-          }`}
-        >
-          <div className="flex items-center gap-3 mb-2">
-            <span
-              className={`w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                purchaseType === "subscribe"
-                  ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]"
-                  : "border-[hsl(200,20%,70%)]"
-              }`}
-            >
-              {purchaseType === "subscribe" && (
-                <span className="w-2 h-2 rounded-full bg-white" />
-              )}
-            </span>
-            <span className="text-[16px] font-semibold text-foreground">Subscribe & Save</span>
-            <span className="ml-auto px-2 py-0.5 rounded bg-[hsl(142,55%,35%)] text-white text-[11px] font-bold">
-              SAVE 15%
-            </span>
-          </div>
-          <div className="pl-8 flex items-baseline gap-2 mb-3">
-            <span className="text-[15px] line-through text-[hsl(200,10%,55%)]">
-              {current.priceLabel}
-            </span>
-            <span className="text-[18px] font-extrabold text-foreground">${subscribePrice}</span>
-            <span className="text-[13px] text-[hsl(200,15%,40%)]">each</span>
-          </div>
-          <div className="pl-8 border-t border-[hsl(200,20%,88%)] pt-3 space-y-1.5">
-            <div className="flex items-center gap-2 text-[13px] text-foreground">
-              <Check className="w-4 h-4 text-[hsl(142,55%,35%)] flex-shrink-0" strokeWidth={3} />
-              <span>Save 15% every order</span>
-            </div>
-            <div className="flex items-center gap-2 text-[13px] text-foreground">
-              <Check className="w-4 h-4 text-[hsl(142,55%,35%)] flex-shrink-0" strokeWidth={3} />
-              <span>Delivered every 30 days</span>
-            </div>
-            <div className="flex items-center gap-2 text-[13px] text-foreground">
-              <Check className="w-4 h-4 text-[hsl(142,55%,35%)] flex-shrink-0" strokeWidth={3} />
-              <span>Skip, pause, or cancel anytime</span>
-            </div>
-          </div>
-        </button>
+        {/* Price summary */}
+        <div className="flex items-baseline justify-center gap-3 mb-5">
+          <span className="text-[28px] font-extrabold text-[hsl(207,76%,24%)]">
+            {current.priceLabel}
+          </span>
+          <span className="text-[15px] text-[hsl(200,15%,40%)]">{current.perJar}</span>
+        </div>
 
         {/* CTA */}
         <a
