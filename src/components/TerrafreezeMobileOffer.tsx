@@ -104,17 +104,28 @@ const TerrafreezeMobileOffer = () => {
                     {q.badge}
                   </span>
                 )}
-                <div className="flex items-end justify-center gap-0.5 h-20 mb-2 overflow-hidden">
-                  {[...Array(q.jars > 3 ? 4 : q.jars)].map((_, i) => (
-                    <img
-                      key={i}
-                      src={jarImg}
-                      alt=""
-                      className={`object-contain max-h-full ${
-                        q.jars === 1 ? "h-20 w-auto" : q.jars <= 3 ? "h-14 w-auto" : "h-10 w-auto"
-                      }`}
-                    />
-                  ))}
+                <div className="relative h-24 mb-2 flex items-center justify-center">
+                  {[...Array(q.jars > 3 ? 3 : q.jars)].map((_, i) => {
+                    const total = q.jars > 3 ? 3 : q.jars;
+                    const offset = (i - (total - 1) / 2) * 6;
+                    return (
+                      <img
+                        key={i}
+                        src={jarImg}
+                        alt=""
+                        className="absolute h-24 w-auto object-contain"
+                        style={{
+                          transform: `translateX(${offset}px)`,
+                          zIndex: i,
+                        }}
+                      />
+                    );
+                  })}
+                  {q.jars > 3 && (
+                    <span className="absolute bottom-0 right-0 bg-[hsl(207,76%,24%)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+                      x{q.jars}
+                    </span>
+                  )}
                 </div>
                 <p className="text-[14px] font-bold text-foreground text-center">{q.qty}</p>
                 <p className="text-[11px] text-[hsl(200,15%,40%)] text-center">{q.perJar}</p>
