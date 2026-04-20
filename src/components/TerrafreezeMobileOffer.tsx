@@ -107,14 +107,14 @@ const TerrafreezeMobileOffer = () => {
                     {q.badge}
                   </span>
                 )}
-                <div className="flex items-end justify-center gap-0.5 h-16 mb-1">
+                <div className="flex items-end justify-center gap-0.5 h-20 mb-2 overflow-hidden">
                   {[...Array(q.jars > 3 ? 4 : q.jars)].map((_, i) => (
                     <img
                       key={i}
                       src={jarImg}
                       alt=""
-                      className={`object-contain ${
-                        q.jars === 1 ? "h-16" : q.jars <= 3 ? "h-12" : "h-9"
+                      className={`object-contain max-h-full ${
+                        q.jars === 1 ? "h-20 w-auto" : q.jars <= 3 ? "h-14 w-auto" : "h-10 w-auto"
                       }`}
                     />
                   ))}
