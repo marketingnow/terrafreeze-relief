@@ -56,7 +56,7 @@ const QUANTITIES: Qty[] = [
 
 const TerrafreezeMobileOffer = () => {
   const [selectedQty, setSelectedQty] = useState<string>("popular");
-  const [purchaseType, setPurchaseType] = useState<"onetime" | "subscribe">("onetime");
+  
 
   const current = QUANTITIES.find((q) => q.id === selectedQty) ?? QUANTITIES[1];
 
