@@ -106,15 +106,15 @@ const TerrafreezeMobileOffer = () => {
                     {q.badge}
                   </span>
                 )}
-                <div className="relative h-24 mb-2 flex items-center justify-center">
+                <div className="relative h-32 mb-2 flex items-center justify-center overflow-hidden">
                   {q.jars === 1 && (
-                    <img src={jarImg} alt="" className="h-24 w-auto object-contain" />
+                    <img src={jarImg} alt="" className="max-h-full max-w-full object-contain" />
                   )}
                   {q.jars === 3 && (
-                    <img src={threePackImg} alt="" className="h-24 w-auto object-contain" />
+                    <img src={threePackImg} alt="" className="max-h-full max-w-full object-contain scale-110" />
                   )}
                   {q.jars === 6 && (
-                    <img src={sixPackImg} alt="" className="h-24 w-auto object-contain" />
+                    <img src={sixPackImg} alt="" className="max-h-full max-w-full object-contain scale-110" />
                   )}
                 </div>
                 <p className="text-[14px] font-bold text-foreground text-center">{q.qty}</p>
