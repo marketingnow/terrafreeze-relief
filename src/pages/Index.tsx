@@ -19,6 +19,7 @@ const Index = () => {
       <TestimonialsSection />
       <GuaranteeSection />
       <TerrafreezeProductSection />
+      <TerrafreezeMobileOffer />
     </main>
   );
 };
