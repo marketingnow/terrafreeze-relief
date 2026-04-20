@@ -50,7 +50,7 @@ const PACKAGES: Pkg[] = [
     perJar: "Reg. $69.00",
     savings: "Save $39.05",
     jars: 1,
-    checkoutUrl: "https://terrafreeze.ca/?add-to-cart=677",
+    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=677",
   },
   {
     id: "popular",
@@ -62,7 +62,7 @@ const PACKAGES: Pkg[] = [
     perJar: "Reg. $119.00",
     savings: "Save $70.00",
     jars: 3,
-    checkoutUrl: "https://terrafreeze.ca/?add-to-cart=7361",
+    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=7361",
   },
   {
     id: "best",
@@ -74,7 +74,7 @@ const PACKAGES: Pkg[] = [
     perJar: "Reg. $149.00",
     savings: "Save $60.00",
     jars: 6,
-    checkoutUrl: "https://terrafreeze.ca/?add-to-cart=7575",
+    checkoutUrl: "https://terrafreeze.ca/checkout/?add-to-cart=7575",
   },
 ];
 
