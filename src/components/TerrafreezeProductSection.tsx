@@ -280,29 +280,29 @@ const TerrafreezeProductSection = () => {
             </Accordion>
 
             <div className="tf-product__trust-strip mt-6">
-              <div className="grid grid-cols-3 gap-4 py-5 border-y border-[hsl(200,20%,88%)]">
-                <div className="flex flex-col items-center text-center gap-2 px-2">
-                  <Package className="w-6 h-6 text-[hsl(207,76%,24%)]" strokeWidth={1.5} />
-                  <p className="text-[13px] leading-tight text-foreground">
-                    Free shipping on<br />orders $60 +
+              <div className="grid grid-cols-3 gap-2 md:gap-4 py-4 md:py-5 border-y border-[hsl(200,20%,88%)]">
+                <div className="flex flex-col items-center text-center gap-1.5 md:gap-2 px-1 md:px-2">
+                  <Package className="w-5 h-5 md:w-6 md:h-6 text-[hsl(207,76%,24%)]" strokeWidth={1.5} />
+                  <p className="text-[11px] md:text-[13px] leading-tight text-foreground">
+                    Free shipping on orders $60+
                   </p>
                 </div>
-                <div className="flex flex-col items-center text-center gap-2 px-2 border-x border-[hsl(200,20%,88%)]">
-                  <Truck className="w-6 h-6 text-[hsl(207,76%,24%)]" strokeWidth={1.5} />
-                  <p className="text-[13px] leading-tight text-foreground">
-                    3-5 Day<br />Canadian Delivery
+                <div className="flex flex-col items-center text-center gap-1.5 md:gap-2 px-1 md:px-2 border-x border-[hsl(200,20%,88%)]">
+                  <Truck className="w-5 h-5 md:w-6 md:h-6 text-[hsl(207,76%,24%)]" strokeWidth={1.5} />
+                  <p className="text-[11px] md:text-[13px] leading-tight text-foreground">
+                    3-5 Day Canadian Delivery
                   </p>
                 </div>
-                <div className="flex flex-col items-center text-center gap-2 px-2">
-                  <RotateCcw className="w-6 h-6 text-[hsl(207,76%,24%)]" strokeWidth={1.5} />
-                  <p className="text-[13px] leading-tight text-foreground">
-                    180-Day Money-<br />Back Guarantee
+                <div className="flex flex-col items-center text-center gap-1.5 md:gap-2 px-1 md:px-2">
+                  <RotateCcw className="w-5 h-5 md:w-6 md:h-6 text-[hsl(207,76%,24%)]" strokeWidth={1.5} />
+                  <p className="text-[11px] md:text-[13px] leading-tight text-foreground">
+                    180-Day Money-Back Guarantee
                   </p>
                 </div>
               </div>
               <div className="mt-4 flex items-center justify-center gap-2 py-3 px-4 rounded-md bg-[hsl(43,90%,93%)] border border-[hsl(43,76%,80%)]">
-                <Flame className="w-4 h-4 text-[hsl(20,90%,50%)] fill-[hsl(20,90%,50%)]" />
-                <p className="text-[14px] font-medium text-foreground">
+                <Flame className="w-4 h-4 text-[hsl(20,90%,50%)] fill-[hsl(20,90%,50%)] flex-shrink-0" />
+                <p className="text-[12px] md:text-[14px] font-medium text-foreground">
                   Selling fast — 370 orders in the last 24 hours!
                 </p>
               </div>
