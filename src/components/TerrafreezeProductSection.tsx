@@ -146,15 +146,15 @@ const TerrafreezeProductSection = () => {
 
           {/* RIGHT — Details */}
           <div className="tf-product__details">
-            <p className="tf-product__eyebrow text-[12px] font-semibold tracking-[0.12em] uppercase text-[hsl(202,72%,35%)] mb-3">
+            <p className="tf-product__eyebrow text-[12px] font-semibold tracking-[0.12em] uppercase text-[hsl(202,72%,35%)] mb-3 text-center md:text-left">
               Made in Canada • Health Canada Registered
             </p>
 
-            <h2 className="tf-product__title text-[28px] md:text-[34px] lg:text-[38px] font-extrabold leading-[1.1] tracking-tight text-[hsl(207,76%,24%)] mb-3">
+            <h2 className="tf-product__title text-[28px] md:text-[34px] lg:text-[38px] font-extrabold leading-[1.1] tracking-tight text-[hsl(207,76%,24%)] mb-3 text-center md:text-left">
               TERRAFREEZE
             </h2>
 
-            <div className="tf-product__rating flex items-center gap-2 mb-5">
+            <div className="tf-product__rating flex items-center justify-center md:justify-start gap-2 mb-5">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <StarIcon key={i} className="w-4 h-4 text-[hsl(43,76%,46%)]" />
