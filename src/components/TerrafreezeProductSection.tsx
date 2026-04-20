@@ -6,10 +6,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import whatsInsideImg from "@/assets/terrafreeze-whats-inside.jpg";
 import jarImg from "@/assets/terrafreeze-jar.png";
 import threePackImg from "@/assets/terrafreeze-3pack.png";
 import sixPackImg from "@/assets/terrafreeze-6pack.png";
+import reviewJordanImg from "@/assets/terrafreeze-review-jordan.png";
+import provenIngredientsImg from "@/assets/terrafreeze-proven-ingredients.png";
+import reviewCircleImg from "@/assets/terrafreeze-review-circle.png";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -20,10 +22,9 @@ const StarIcon = ({ className }: { className?: string }) => (
 const MAIN_IMAGE = jarImg;
 const THUMBS = [
   jarImg,
-  whatsInsideImg,
-  "https://terrafreeze.ca/wp-content/uploads/terrafreeze-ingredients-flat.png",
-  "https://terrafreeze.ca/wp-content/uploads/terrafreeze-application.png",
-  "https://terrafreeze.ca/wp-content/uploads/terrafreeze-package-bundle.png",
+  provenIngredientsImg,
+  reviewJordanImg,
+  reviewCircleImg,
 ];
 
 type Pkg = {
