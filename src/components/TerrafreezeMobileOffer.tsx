@@ -56,12 +56,9 @@ const QUANTITIES: Qty[] = [
 
 const TerrafreezeMobileOffer = () => {
   const [selectedQty, setSelectedQty] = useState<string>("popular");
-  const [purchaseType, setPurchaseType] = useState<"onetime" | "subscribe">("onetime");
+  
 
   const current = QUANTITIES.find((q) => q.id === selectedQty) ?? QUANTITIES[1];
-  const subscribePrice = (current.price * 0.85).toFixed(2);
-  const ctaPrice =
-    purchaseType === "subscribe" ? `$${subscribePrice}` : current.priceLabel;
 
   return (
     <section
@@ -107,14 +104,14 @@ const TerrafreezeMobileOffer = () => {
                     {q.badge}
                   </span>
                 )}
-                <div className="flex items-end justify-center gap-0.5 h-16 mb-1">
+                <div className="flex items-end justify-center gap-0.5 h-20 mb-2 overflow-hidden">
                   {[...Array(q.jars > 3 ? 4 : q.jars)].map((_, i) => (
                     <img
                       key={i}
                       src={jarImg}
                       alt=""
-                      className={`object-contain ${
-                        q.jars === 1 ? "h-16" : q.jars <= 3 ? "h-12" : "h-9"
+                      className={`object-contain max-h-full ${
+                        q.jars === 1 ? "h-20 w-auto" : q.jars <= 3 ? "h-14 w-auto" : "h-10 w-auto"
                       }`}
                     />
                   ))}
@@ -126,96 +123,20 @@ const TerrafreezeMobileOffer = () => {
           })}
         </div>
 
-        {/* Purchase type */}
-        <p className="text-[15px] font-semibold text-foreground mb-3">
-          Select your purchase type:
-        </p>
-
-        {/* One Time */}
-        <button
-          type="button"
-          onClick={() => setPurchaseType("onetime")}
-          className={`w-full rounded-xl border-2 p-4 mb-3 text-left transition-all ${
-            purchaseType === "onetime"
-              ? "border-[hsl(207,76%,24%)] bg-[hsl(200,30%,96%)]"
-              : "border-[hsl(200,20%,88%)] bg-white"
-          }`}
-        >
-          <div className="flex items-center gap-3">
-            <span
-              className={`w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                purchaseType === "onetime"
-                  ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]"
-                  : "border-[hsl(200,20%,70%)]"
-              }`}
-            >
-              {purchaseType === "onetime" && (
-                <span className="w-2 h-2 rounded-full bg-white" />
-              )}
-            </span>
-            <span className="text-[16px] font-semibold text-foreground">One Time</span>
-            <span className="ml-auto text-[16px] font-bold text-foreground">
-              {current.priceLabel}
-            </span>
-          </div>
-        </button>
-
-        {/* Subscribe & Save */}
-        <button
-          type="button"
-          onClick={() => setPurchaseType("subscribe")}
-          className={`w-full rounded-xl border-2 p-4 mb-5 text-left transition-all ${
-            purchaseType === "subscribe"
-              ? "border-[hsl(207,76%,24%)] bg-[hsl(200,30%,96%)]"
-              : "border-[hsl(200,20%,88%)] bg-white"
-          }`}
-        >
-          <div className="flex items-center gap-3 mb-2">
-            <span
-              className={`w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                purchaseType === "subscribe"
-                  ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]"
-                  : "border-[hsl(200,20%,70%)]"
-              }`}
-            >
-              {purchaseType === "subscribe" && (
-                <span className="w-2 h-2 rounded-full bg-white" />
-              )}
-            </span>
-            <span className="text-[16px] font-semibold text-foreground">Subscribe & Save</span>
-            <span className="ml-auto px-2 py-0.5 rounded bg-[hsl(142,55%,35%)] text-white text-[11px] font-bold">
-              SAVE 15%
-            </span>
-          </div>
-          <div className="pl-8 flex items-baseline gap-2 mb-3">
-            <span className="text-[15px] line-through text-[hsl(200,10%,55%)]">
-              {current.priceLabel}
-            </span>
-            <span className="text-[18px] font-extrabold text-foreground">${subscribePrice}</span>
-            <span className="text-[13px] text-[hsl(200,15%,40%)]">each</span>
-          </div>
-          <div className="pl-8 border-t border-[hsl(200,20%,88%)] pt-3 space-y-1.5">
-            <div className="flex items-center gap-2 text-[13px] text-foreground">
-              <Check className="w-4 h-4 text-[hsl(142,55%,35%)] flex-shrink-0" strokeWidth={3} />
-              <span>Save 15% every order</span>
-            </div>
-            <div className="flex items-center gap-2 text-[13px] text-foreground">
-              <Check className="w-4 h-4 text-[hsl(142,55%,35%)] flex-shrink-0" strokeWidth={3} />
-              <span>Delivered every 30 days</span>
-            </div>
-            <div className="flex items-center gap-2 text-[13px] text-foreground">
-              <Check className="w-4 h-4 text-[hsl(142,55%,35%)] flex-shrink-0" strokeWidth={3} />
-              <span>Skip, pause, or cancel anytime</span>
-            </div>
-          </div>
-        </button>
+        {/* Price summary */}
+        <div className="flex items-baseline justify-center gap-3 mb-5">
+          <span className="text-[28px] font-extrabold text-[hsl(207,76%,24%)]">
+            {current.priceLabel}
+          </span>
+          <span className="text-[15px] text-[hsl(200,15%,40%)]">{current.perJar}</span>
+        </div>
 
         {/* CTA */}
         <a
           href={current.checkoutUrl}
           className="block text-center w-full px-6 py-4 bg-[hsl(207,76%,24%)] text-white font-extrabold text-[18px] tracking-wide rounded-md hover:brightness-110 transition-all active:scale-[0.98]"
         >
-          ADD TO CART — {ctaPrice}
+          ADD TO CART — {current.priceLabel}
         </a>
 
         {/* Trust icons */}
