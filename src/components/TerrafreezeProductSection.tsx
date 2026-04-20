@@ -248,7 +248,7 @@ const TerrafreezeProductSection = () => {
               href={current.checkoutUrl}
               className="tf-product__cta block text-center w-full px-6 py-4 bg-[hsl(207,76%,24%)] text-white font-extrabold text-[18px] md:text-[22px] tracking-wide rounded-md hover:brightness-110 transition-all active:scale-[0.98]"
             >
-              ADD TO CART • {current.priceLabel}
+              ADD TO CART - {current.priceLabel}
             </a>
 
             <div className="tf-product__trust-strip mt-4">
