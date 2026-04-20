@@ -135,6 +135,13 @@ const TerrafreezeProductSection = () => {
                 </button>
               ))}
             </div>
+
+            <blockquote className="tf-product__quote hidden md:block border-l-4 border-[hsl(202,72%,35%)] pl-4 py-2 mt-6">
+              <p className="italic text-[16px] md:text-[17px] leading-snug text-foreground">
+                "I've tried so many creams for my arthritis and nothing has worked like TERRAFREEZE. I can finally enjoy gardening again without constant pain in my hands."
+              </p>
+              <footer className="text-[13px] text-[hsl(200,10%,40%)] mt-2">— Sarah M., Toronto ON</footer>
+            </blockquote>
           </div>
 
           {/* RIGHT — Details */}
@@ -147,12 +154,19 @@ const TerrafreezeProductSection = () => {
               TERRAFREEZE Relief Cream
             </h2>
 
-            <blockquote className="tf-product__quote hidden md:block border-l-4 border-[hsl(202,72%,35%)] pl-4 py-1 mb-6">
-              <p className="italic text-[16px] md:text-[17px] leading-snug text-foreground">
-                "I've tried so many creams for my arthritis and nothing has worked like TERRAFREEZE. I can finally enjoy gardening again without constant pain in my hands."
-              </p>
-              <footer className="text-[13px] text-[hsl(200,10%,40%)] mt-2">— Sarah M., Toronto ON</footer>
-            </blockquote>
+            <ul className="tf-product__benefits hidden md:grid grid-cols-2 gap-x-4 gap-y-2.5 mb-6">
+              {[
+                "Fast-acting cooling relief in minutes",
+                "18 active ingredients including Arnica & MSM",
+                "Health Canada NPN registered",
+                "Non-greasy, no medicinal smell",
+              ].map((b) => (
+                <li key={b} className="flex items-start gap-2 text-[14px] leading-snug text-foreground">
+                  <Check className="w-4 h-4 mt-0.5 text-[hsl(142,55%,35%)] shrink-0" strokeWidth={3} />
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
 
             <p className="tf-product__label text-[14px] font-bold uppercase tracking-wider text-foreground mb-3">
               Choose Your Package
