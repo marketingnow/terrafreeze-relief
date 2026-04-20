@@ -150,9 +150,18 @@ const TerrafreezeProductSection = () => {
               Made in Canada • Health Canada Registered
             </p>
 
-            <h2 className="tf-product__title text-[28px] md:text-[34px] lg:text-[38px] font-extrabold leading-[1.1] tracking-tight text-[hsl(207,76%,24%)] mb-4">
-              TERRAFREEZE Relief Cream
+            <h2 className="tf-product__title text-[28px] md:text-[34px] lg:text-[38px] font-extrabold leading-[1.1] tracking-tight text-[hsl(207,76%,24%)] mb-3">
+              TERRAFREEZE
             </h2>
+
+            <div className="tf-product__rating flex items-center gap-2 mb-5">
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <StarIcon key={i} className="w-4 h-4 text-[hsl(43,76%,46%)]" />
+                ))}
+              </div>
+              <span className="text-[13px] font-medium text-foreground">4.9/5 — 2,400+ verified reviews</span>
+            </div>
 
             <ul className="tf-product__benefits hidden md:grid grid-cols-2 gap-x-4 gap-y-2.5 mb-6">
               {[
@@ -237,14 +246,6 @@ const TerrafreezeProductSection = () => {
               Our customers see the best results after using TERRAFREEZE consistently for 60 days.
             </p>
 
-            <div className="tf-product__rating flex items-center gap-2 mb-3">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <StarIcon key={i} className="w-4 h-4 text-[hsl(43,76%,46%)]" />
-                ))}
-              </div>
-              <span className="text-[13px] font-medium text-foreground">4.9/5 — 2,400+ verified reviews</span>
-            </div>
 
             <a
               href={current.checkoutUrl}
