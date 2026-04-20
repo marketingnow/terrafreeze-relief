@@ -35,6 +35,7 @@ type Pkg = {
   priceLabel: string;
   perJar: string;
   savings?: string;
+  jars: number;
   checkoutUrl: string;
 };
 
