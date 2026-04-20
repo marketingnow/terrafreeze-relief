@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/accordion";
 import whatsInsideImg from "@/assets/terrafreeze-whats-inside.jpg";
 import jarImg from "@/assets/terrafreeze-jar.png";
+import threePackImg from "@/assets/terrafreeze-3pack.png";
+import sixPackImg from "@/assets/terrafreeze-6pack.png";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -33,6 +35,7 @@ type Pkg = {
   priceLabel: string;
   perJar: string;
   savings?: string;
+  jars: number;
   checkoutUrl: string;
 };
 
@@ -45,6 +48,7 @@ const PACKAGES: Pkg[] = [
     priceLabel: "$29.95",
     perJar: "Reg. $69.00",
     savings: "Save $39.05",
+    jars: 1,
     checkoutUrl: "https://terrafreeze.ca/?add-to-cart=677",
   },
   {
@@ -56,6 +60,7 @@ const PACKAGES: Pkg[] = [
     priceLabel: "$49.00",
     perJar: "Reg. $119.00",
     savings: "Save $70.00",
+    jars: 3,
     checkoutUrl: "https://terrafreeze.ca/?add-to-cart=7361",
   },
   {
@@ -67,6 +72,7 @@ const PACKAGES: Pkg[] = [
     priceLabel: "$89.00",
     perJar: "Reg. $149.00",
     savings: "Save $60.00",
+    jars: 6,
     checkoutUrl: "https://terrafreeze.ca/?add-to-cart=7575",
   },
 ];
@@ -146,6 +152,13 @@ const TerrafreezeProductSection = () => {
               <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$69.00</span>
             </div>
 
+            <blockquote className="tf-product__quote hidden md:block border-l-4 border-[hsl(202,72%,35%)] pl-4 py-1 mb-6">
+              <p className="italic text-[16px] md:text-[17px] leading-snug text-foreground">
+                "I've tried so many creams for my arthritis and nothing has worked like TERRAFREEZE. I can finally enjoy gardening again without constant pain in my hands."
+              </p>
+              <footer className="text-[13px] text-[hsl(200,10%,40%)] mt-2">— Sarah M., Toronto ON</footer>
+            </blockquote>
+
             <p className="tf-product__label text-[14px] font-bold uppercase tracking-wider text-foreground mb-3">
               Choose Your Package
             </p>
@@ -178,22 +191,33 @@ const TerrafreezeProductSection = () => {
                         {pkg.badge}
                       </span>
                     )}
-                    <div className="flex items-start gap-2">
-                      <span
-                        className={`mt-0.5 w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                          isActive ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]" : "border-[hsl(200,20%,70%)]"
-                        }`}
-                      >
-                        {isActive && <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />}
-                      </span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[13px] font-bold text-foreground">{pkg.qty}</p>
-                        <p className="text-[16px] font-extrabold text-[hsl(207,76%,24%)] mt-0.5">{pkg.priceLabel}</p>
-                        <p className="text-[11px] text-[hsl(200,10%,45%)] line-through">{pkg.perJar}</p>
-                        {pkg.savings && (
-                          <p className="text-[11px] font-semibold text-[hsl(142,55%,35%)] mt-1">{pkg.savings}</p>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="h-24 w-full flex items-end justify-center mb-2">
+                        {pkg.jars === 1 && (
+                          <img src={jarImg} alt="1 jar" className="h-24 w-auto object-contain" />
+                        )}
+                        {pkg.jars === 3 && (
+                          <img src={threePackImg} alt="3 jars" className="h-24 w-auto object-contain" />
+                        )}
+                        {pkg.jars === 6 && (
+                          <img src={sixPackImg} alt="6 jars" className="h-24 w-auto object-contain" />
                         )}
                       </div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span
+                          className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
+                            isActive ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]" : "border-[hsl(200,20%,70%)]"
+                          }`}
+                        >
+                          {isActive && <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />}
+                        </span>
+                        <p className="text-[13px] font-bold text-foreground">{pkg.qty}</p>
+                      </div>
+                      <p className="text-[16px] font-extrabold text-[hsl(207,76%,24%)]">{pkg.priceLabel}</p>
+                      <p className="text-[11px] text-[hsl(200,10%,45%)] line-through">{pkg.perJar}</p>
+                      {pkg.savings && (
+                        <p className="text-[11px] font-semibold text-[hsl(142,55%,35%)] mt-1">{pkg.savings}</p>
+                      )}
                     </div>
                   </button>
                 );
