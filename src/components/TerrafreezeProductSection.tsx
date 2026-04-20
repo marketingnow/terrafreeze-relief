@@ -275,6 +275,10 @@ const TerrafreezeProductSection = () => {
               ))}
             </Accordion>
 
+            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[hsl(202,72%,35%)] mt-5 text-center">
+              Made in Canada • Health Canada Registered
+            </p>
+
             <div className="tf-product__trust-strip mt-6">
               <div className="grid grid-cols-3 gap-2 md:gap-4 py-4 md:py-5 border-y border-[hsl(200,20%,88%)]">
                 <div className="flex flex-col items-center text-center gap-1.5 md:gap-2 px-1 md:px-2">
