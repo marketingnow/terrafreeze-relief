@@ -251,35 +251,7 @@ const TerrafreezeProductSection = () => {
               ADD TO CART • {current.priceLabel}
             </a>
 
-            <div className="tf-product__value-props hidden sm:flex flex-col sm:flex-row gap-2 sm:gap-6 mt-3 mb-6">
-              <span className="flex items-center gap-2 text-[13px] text-foreground">
-                <Check className="w-4 h-4 text-[hsl(142,55%,35%)]" strokeWidth={3} />
-                Free shipping on orders over $60
-              </span>
-              <span className="flex items-center gap-2 text-[13px] text-foreground">
-                <Check className="w-4 h-4 text-[hsl(142,55%,35%)]" strokeWidth={3} />
-                180-day money-back guarantee
-              </span>
-            </div>
-
-            <Accordion type="single" collapsible className="tf-product__accordion border-t border-[hsl(200,20%,88%)]">
-              {FAQS.map((item, i) => (
-                <AccordionItem key={i} value={`item-${i}`} className="border-b border-[hsl(200,20%,88%)]">
-                  <AccordionTrigger className="text-[15px] font-semibold text-foreground hover:no-underline py-4">
-                    {item.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[14px] leading-relaxed text-[hsl(200,15%,30%)]">
-                    {item.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-
-            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[hsl(202,72%,35%)] mt-5 text-center">
-              Made in Canada • Health Canada Registered
-            </p>
-
-            <div className="tf-product__trust-strip mt-6">
+            <div className="tf-product__trust-strip mt-4">
               <div className="grid grid-cols-3 gap-2 md:gap-4 py-4 md:py-5 border-y border-[hsl(200,20%,88%)]">
                 <div className="flex flex-col items-center text-center gap-1.5 md:gap-2 px-1 md:px-2">
                   <Package className="w-5 h-5 md:w-6 md:h-6 text-[hsl(207,76%,24%)]" strokeWidth={1.5} />
@@ -307,6 +279,34 @@ const TerrafreezeProductSection = () => {
                 </p>
               </div>
             </div>
+
+            <div className="tf-product__value-props hidden sm:flex flex-col sm:flex-row gap-2 sm:gap-6 mt-6 mb-6">
+              <span className="flex items-center gap-2 text-[13px] text-foreground">
+                <Check className="w-4 h-4 text-[hsl(142,55%,35%)]" strokeWidth={3} />
+                Free shipping on orders over $60
+              </span>
+              <span className="flex items-center gap-2 text-[13px] text-foreground">
+                <Check className="w-4 h-4 text-[hsl(142,55%,35%)]" strokeWidth={3} />
+                180-day money-back guarantee
+              </span>
+            </div>
+
+            <Accordion type="single" collapsible className="tf-product__accordion border-t border-[hsl(200,20%,88%)] mt-6">
+              {FAQS.map((item, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border-b border-[hsl(200,20%,88%)]">
+                  <AccordionTrigger className="text-[15px] font-semibold text-foreground hover:no-underline py-4">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-[14px] leading-relaxed text-[hsl(200,15%,30%)]">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+
+            <p className="text-[12px] font-semibold tracking-[0.12em] uppercase text-[hsl(202,72%,35%)] mt-5 text-center">
+              Made in Canada • Health Canada Registered
+            </p>
           </div>
         </div>
       </div>
