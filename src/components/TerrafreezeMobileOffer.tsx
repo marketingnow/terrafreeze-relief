@@ -59,9 +59,6 @@ const TerrafreezeMobileOffer = () => {
   const [purchaseType, setPurchaseType] = useState<"onetime" | "subscribe">("onetime");
 
   const current = QUANTITIES.find((q) => q.id === selectedQty) ?? QUANTITIES[1];
-  const subscribePrice = (current.price * 0.85).toFixed(2);
-  const ctaPrice =
-    purchaseType === "subscribe" ? `$${subscribePrice}` : current.priceLabel;
 
   return (
     <section
