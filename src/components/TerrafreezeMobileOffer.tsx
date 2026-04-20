@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Check, Package, Truck, ShieldCheck, Flame } from "lucide-react";
 import jarImg from "@/assets/terrafreeze-jar.png";
+import threePackImg from "@/assets/terrafreeze-3pack.png";
+import sixPackImg from "@/assets/terrafreeze-6pack.png";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -104,34 +106,15 @@ const TerrafreezeMobileOffer = () => {
                     {q.badge}
                   </span>
                 )}
-                <div className="relative h-24 mb-2 flex items-end justify-center">
+                <div className="relative h-24 mb-2 flex items-center justify-center">
                   {q.jars === 1 && (
                     <img src={jarImg} alt="" className="h-24 w-auto object-contain" />
                   )}
                   {q.jars === 3 && (
-                    <div className="flex items-end justify-center gap-0.5">
-                      <img src={jarImg} alt="" className="h-[70px] w-auto object-contain" />
-                      <img src={jarImg} alt="" className="h-[80px] w-auto object-contain" />
-                      <img src={jarImg} alt="" className="h-[70px] w-auto object-contain" />
-                    </div>
+                    <img src={threePackImg} alt="" className="h-24 w-auto object-contain" />
                   )}
                   {q.jars === 6 && (
-                    <>
-                      <div className="relative h-24 w-auto">
-                        {[0, 1, 2].map((i) => (
-                          <img
-                            key={i}
-                            src={jarImg}
-                            alt=""
-                            className="absolute left-1/2 -translate-x-1/2 h-[58px] w-auto object-contain"
-                            style={{ top: `${i * 18}px`, zIndex: 3 - i }}
-                          />
-                        ))}
-                      </div>
-                      <span className="absolute bottom-0 right-0 bg-[hsl(207,76%,24%)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
-                        x6
-                      </span>
-                    </>
+                    <img src={sixPackImg} alt="" className="h-24 w-auto object-contain" />
                   )}
                 </div>
                 <p className="text-[14px] font-bold text-foreground text-center">{q.qty}</p>
