@@ -147,11 +147,6 @@ const TerrafreezeProductSection = () => {
               TERRAFREEZE Relief Cream
             </h2>
 
-            <div className="tf-product__price-row flex items-baseline gap-3 mb-5">
-              <span className="text-[28px] md:text-[32px] font-extrabold text-foreground">$29.95</span>
-              <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$69.00</span>
-            </div>
-
             <blockquote className="tf-product__quote hidden md:block border-l-4 border-[hsl(202,72%,35%)] pl-4 py-1 mb-6">
               <p className="italic text-[16px] md:text-[17px] leading-snug text-foreground">
                 "I've tried so many creams for my arthritis and nothing has worked like TERRAFREEZE. I can finally enjoy gardening again without constant pain in my hands."
