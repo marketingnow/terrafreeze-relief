@@ -191,22 +191,33 @@ const TerrafreezeProductSection = () => {
                         {pkg.badge}
                       </span>
                     )}
-                    <div className="flex items-start gap-2">
-                      <span
-                        className={`mt-0.5 w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                          isActive ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]" : "border-[hsl(200,20%,70%)]"
-                        }`}
-                      >
-                        {isActive && <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />}
-                      </span>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[13px] font-bold text-foreground">{pkg.qty}</p>
-                        <p className="text-[16px] font-extrabold text-[hsl(207,76%,24%)] mt-0.5">{pkg.priceLabel}</p>
-                        <p className="text-[11px] text-[hsl(200,10%,45%)] line-through">{pkg.perJar}</p>
-                        {pkg.savings && (
-                          <p className="text-[11px] font-semibold text-[hsl(142,55%,35%)] mt-1">{pkg.savings}</p>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="h-24 w-full flex items-end justify-center mb-2">
+                        {pkg.jars === 1 && (
+                          <img src={jarImg} alt="1 jar" className="h-24 w-auto object-contain" />
+                        )}
+                        {pkg.jars === 3 && (
+                          <img src={threePackImg} alt="3 jars" className="h-24 w-auto object-contain" />
+                        )}
+                        {pkg.jars === 6 && (
+                          <img src={sixPackImg} alt="6 jars" className="h-24 w-auto object-contain" />
                         )}
                       </div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <span
+                          className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
+                            isActive ? "border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)]" : "border-[hsl(200,20%,70%)]"
+                          }`}
+                        >
+                          {isActive && <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />}
+                        </span>
+                        <p className="text-[13px] font-bold text-foreground">{pkg.qty}</p>
+                      </div>
+                      <p className="text-[16px] font-extrabold text-[hsl(207,76%,24%)]">{pkg.priceLabel}</p>
+                      <p className="text-[11px] text-[hsl(200,10%,45%)] line-through">{pkg.perJar}</p>
+                      {pkg.savings && (
+                        <p className="text-[11px] font-semibold text-[hsl(142,55%,35%)] mt-1">{pkg.savings}</p>
+                      )}
                     </div>
                   </button>
                 );
