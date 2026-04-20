@@ -253,7 +253,7 @@ const TerrafreezeProductSection = () => {
               ADD TO CART • {current.priceLabel}
             </a>
 
-            <div className="tf-product__value-props flex flex-col sm:flex-row gap-2 sm:gap-6 mt-3 mb-6">
+            <div className="tf-product__value-props hidden sm:flex flex-col sm:flex-row gap-2 sm:gap-6 mt-3 mb-6">
               <span className="flex items-center gap-2 text-[13px] text-foreground">
                 <Check className="w-4 h-4 text-[hsl(142,55%,35%)]" strokeWidth={3} />
                 Free shipping on orders over $60
