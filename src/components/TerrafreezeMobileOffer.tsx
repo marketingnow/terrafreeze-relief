@@ -104,17 +104,28 @@ const TerrafreezeMobileOffer = () => {
                     {q.badge}
                   </span>
                 )}
-                <div className="flex items-end justify-center gap-0.5 h-20 mb-2 overflow-hidden">
-                  {[...Array(q.jars > 3 ? 4 : q.jars)].map((_, i) => (
-                    <img
-                      key={i}
-                      src={jarImg}
-                      alt=""
-                      className={`object-contain max-h-full ${
-                        q.jars === 1 ? "h-20 w-auto" : q.jars <= 3 ? "h-14 w-auto" : "h-10 w-auto"
-                      }`}
-                    />
-                  ))}
+                <div className="relative h-24 mb-2 flex items-center justify-center">
+                  {[...Array(q.jars > 3 ? 3 : q.jars)].map((_, i) => {
+                    const total = q.jars > 3 ? 3 : q.jars;
+                    const offset = (i - (total - 1) / 2) * 6;
+                    return (
+                      <img
+                        key={i}
+                        src={jarImg}
+                        alt=""
+                        className="absolute h-24 w-auto object-contain"
+                        style={{
+                          transform: `translateX(${offset}px)`,
+                          zIndex: i,
+                        }}
+                      />
+                    );
+                  })}
+                  {q.jars > 3 && (
+                    <span className="absolute bottom-0 right-0 bg-[hsl(207,76%,24%)] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+                      x{q.jars}
+                    </span>
+                  )}
                 </div>
                 <p className="text-[14px] font-bold text-foreground text-center">{q.qty}</p>
                 <p className="text-[11px] text-[hsl(200,15%,40%)] text-center">{q.perJar}</p>
@@ -123,12 +134,20 @@ const TerrafreezeMobileOffer = () => {
           })}
         </div>
 
-        {/* Price summary */}
-        <div className="flex items-baseline justify-center gap-3 mb-5">
-          <span className="text-[28px] font-extrabold text-[hsl(207,76%,24%)]">
-            {current.priceLabel}
-          </span>
-          <span className="text-[15px] text-[hsl(200,15%,40%)]">{current.perJar}</span>
+        {/* One Time */}
+        <p className="text-[15px] font-semibold text-foreground mb-3">
+          Select your purchase type:
+        </p>
+        <div className="w-full rounded-xl border-2 border-[hsl(207,76%,24%)] bg-[hsl(200,30%,96%)] p-4 mb-5">
+          <div className="flex items-center gap-3">
+            <span className="w-5 h-5 rounded-full border-2 border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)] flex-shrink-0 flex items-center justify-center">
+              <span className="w-2 h-2 rounded-full bg-white" />
+            </span>
+            <span className="text-[16px] font-semibold text-foreground">One Time</span>
+            <span className="ml-auto text-[16px] font-bold text-foreground">
+              {current.priceLabel}
+            </span>
+          </div>
         </div>
 
         {/* CTA */}
