@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Check, Package, Truck, ShieldCheck, Flame } from "lucide-react";
 import jarImg from "@/assets/terrafreeze-jar.png";
+import threePackImg from "@/assets/terrafreeze-3pack.png";
+import sixPackImg from "@/assets/terrafreeze-6pack.png";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
