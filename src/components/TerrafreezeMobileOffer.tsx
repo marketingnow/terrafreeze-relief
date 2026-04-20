@@ -134,12 +134,20 @@ const TerrafreezeMobileOffer = () => {
           })}
         </div>
 
-        {/* Price summary */}
-        <div className="flex items-baseline justify-center gap-3 mb-5">
-          <span className="text-[28px] font-extrabold text-[hsl(207,76%,24%)]">
-            {current.priceLabel}
-          </span>
-          <span className="text-[15px] text-[hsl(200,15%,40%)]">{current.perJar}</span>
+        {/* One Time */}
+        <p className="text-[15px] font-semibold text-foreground mb-3">
+          Select your purchase type:
+        </p>
+        <div className="w-full rounded-xl border-2 border-[hsl(207,76%,24%)] bg-[hsl(200,30%,96%)] p-4 mb-5">
+          <div className="flex items-center gap-3">
+            <span className="w-5 h-5 rounded-full border-2 border-[hsl(207,76%,24%)] bg-[hsl(207,76%,24%)] flex-shrink-0 flex items-center justify-center">
+              <span className="w-2 h-2 rounded-full bg-white" />
+            </span>
+            <span className="text-[16px] font-semibold text-foreground">One Time</span>
+            <span className="ml-auto text-[16px] font-bold text-foreground">
+              {current.priceLabel}
+            </span>
+          </div>
         </div>
 
         {/* CTA */}
