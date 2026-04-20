@@ -6,6 +6,7 @@ import AsSeenInSection from "@/components/AsSeenInSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import TerrafreezeProductSection from "@/components/TerrafreezeProductSection";
+import TerrafreezeMobileOffer from "@/components/TerrafreezeMobileOffer";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <TestimonialsSection />
       <GuaranteeSection />
       <TerrafreezeProductSection />
+      <TerrafreezeMobileOffer />
     </main>
   );
 };
