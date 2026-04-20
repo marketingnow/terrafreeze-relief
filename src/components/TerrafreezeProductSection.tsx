@@ -146,13 +146,6 @@ const TerrafreezeProductSection = () => {
               <span className="text-[18px] md:text-[20px] line-through text-[hsl(200,10%,55%)]">$69.00</span>
             </div>
 
-            <blockquote className="tf-product__quote hidden md:block border-l-4 border-[hsl(202,72%,35%)] pl-4 py-1 mb-6">
-              <p className="italic text-[16px] md:text-[17px] leading-snug text-foreground">
-                "I've tried so many creams for my arthritis and nothing has worked like TERRAFREEZE. I can finally enjoy gardening again without constant pain in my hands."
-              </p>
-              <footer className="text-[13px] text-[hsl(200,10%,40%)] mt-2">— Sarah M., Toronto ON</footer>
-            </blockquote>
-
             <p className="tf-product__label text-[14px] font-bold uppercase tracking-wider text-foreground mb-3">
               Choose Your Package
             </p>
