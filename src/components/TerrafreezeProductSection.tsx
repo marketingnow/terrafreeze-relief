@@ -119,7 +119,7 @@ const TerrafreezeProductSection = () => {
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="tf-product__thumbs grid grid-cols-5 gap-2 md:gap-3 mt-3 md:mt-4">
+            <div className="tf-product__thumbs grid grid-cols-4 gap-2 md:gap-3 mt-3 md:mt-4">
               {THUMBS.map((src, i) => (
                 <button
                   key={i}
