@@ -6,12 +6,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import jarImg from "@/assets/terrafreeze-jar.png";
+import jarImg from "@/assets/terrafreeze-pain-relief-cream.png";
 import threePackImg from "@/assets/terrafreeze-3pack.png";
 import sixPackImg from "@/assets/terrafreeze-6pack.png";
-import reviewJordanImg from "@/assets/terrafreeze-review-jordan.png";
-import provenIngredientsImg from "@/assets/terrafreeze-proven-ingredients.png";
-import reviewCircleImg from "@/assets/terrafreeze-review-circle.png";
+import reviewJordanImg from "@/assets/terrafreeze-customer-review.png";
+import provenIngredientsImg from "@/assets/terrafreeze-natural-ingredients-supplement-facts.png";
+import reviewCircleImg from "@/assets/terrafreeze-verified-reviews.png";
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
